@@ -1,2 +1,2 @@
 # cinema
-online cinema ticket booking site
+spring online cinema ticket booking site
