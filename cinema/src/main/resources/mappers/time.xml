@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="time">
+
+<select id="cinema_place" resultType="com.example.cinema.dto.TimeDTO">
+	select DISTINCT movie_title, cinema_place, to_char(time,'YYYY-MM-DD') time
+	from time
+	where movie_title=#{movie_title}
+	and cinema_place=#{cinema_place}
+</select>
+
+<select id="time" resultType="com.example.cinema.dto.TimeDTO">
+	select time_idx, to_char(time,'HH24:MI') time, theater_num
+	from time
+	where movie_title=#{movie_title}
+	and cinema_place=#{cinema_place}
+	and to_char(time,'YYYY-MM-DD') = #{time}
+	order by time
+</select>
+
+<select id="userMovie" resultType="java.util.Map">
+	select 
+	movieCd, m.movie_title, imgpath, price, cinema_place, to_char(time,'YYYY-MM-DD HH24:MI') time, theater_num
+	from movie m, time t
+	where m.movie_title = t.movie_title
+	and time_idx=#{time_idx}
+</select>
+
+<insert id="movie_info_insert">
+	insert into movie
+	values (
+		#{movieCd},
+		#{movieTitle},
+		#{imgpath},
+		13000
+	)
+</insert>
+
+<select id="movie_same_count" resultType="int">
+	SELECT COUNT(*)
+	FROM movie
+	WHERE movieCd = #{movieCd}
+</select>
+
+<select id="movie_info" resultType="java.util.Map">
+	select movieCd, movie_title, imgpath, price
+	from movie 
+	where movieCd=#{movieCd}
+</select>
+
+<select id="getTimeIdx" resultType="int">
+	select time_idx
+	from time 
+	where cinema_place = #{cinema_place}
+	and movie_title = #{movie_title}
+	and time = #{datetime1}
+	and theater_num = #{theater_num}
+</select>
+
+<insert id="insertTime">
+	insert into time
+	values (
+		time_seq.nextval,
+		#{cinema_place},
+		#{movie_title},
+		#{datetime1},
+		#{theater_num}
+	)
+</insert>
+
+</mapper>

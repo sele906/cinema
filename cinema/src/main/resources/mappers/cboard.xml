@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cboard">
+
+	<select id="search_count" resultType="int">
+		select count(*) from adminboard
+		<choose>
+			<when test="search_option != 'all'">
+				where ${search_option} like '%'||#{keyword}||'%'
+			</when>
+			<when test="search_option == 'all'">
+				where subject like '%'||#{keyword}||'%'
+				or contents
+				like '%'||#{keyword}||'%'
+			</when>
+		</choose>
+	</select>
+	
+	<select id="csearch_count" resultType="int">
+		select count(*) from adminboard
+		<choose>
+			<when test="csearch_option != 'all'">
+				where ${csearch_option} like '%'||#{keyword}||'%'
+			</when>
+			<when test="csearch_option == 'all'">
+				where subject like '%'||#{keyword}||'%'
+				or contents
+				like '%'||#{keyword}||'%'
+			</when>
+		</choose>
+	</select>
+
+	<select id="search_list" resultType="com.example.cinema.dto.CboardDTO">
+		select * from (select rownum as rn,A.* from (
+		select
+		num,subject,contents,type,reg_date,see,filename,filesize from
+		adminboard b
+		<choose>
+			<when test="search_option !='all'">
+				where ${search_option} like '%'||#{keyword}||'%'
+			</when>
+			<when test="search_option='all'">
+				where subject like '%'||#{keyword}||'%'
+				or contents
+				like '%'||#{keyword}||'%'
+			</when>
+		</choose>
+		) A ) where rn between #{start} and #{end}
+	</select>
+	
+	<select id="csearch_list" resultType="com.example.cinema.dto.CboardDTO">
+		select * from (select rownum as rn,A.* from (
+		select
+		num,subject,contents,type,reg_date,see,filename,filesize from
+		adminboard b
+		<choose>
+			<when test="csearch_option !='all'">
+				where ${search_option} like '%'||#{keyword}||'%'
+			</when>
+			<when test="csearch_option='all'">
+				where subject like '%'||#{keyword}||'%'
+				or contents
+				like '%'||#{keyword}||'%'
+			</when>
+		</choose>
+		) A ) where rn between #{start} and #{end}
+	</select>
+	
+	<select id="list" resultType="com.example.cinema.dto.CboardDTO">
+		select * from (select rownum as
+		rn,A.* from(select
+		num,subject,type,contents,reg_date,see,filename,filesize from
+		adminboard b order by num desc) A ) where rn between #{start} and
+		#{end}
+	</select>
+
+	<select id="view" resultType="com.example.cinema.dto.CboardDTO">
+		select * from adminboard where num=#{num}
+	</select>
+
+	<select id="count" resultType="int">
+		select count(*) from adminboard
+	</select>
+
+	<update id="see">
+		update adminboard set see = see + 1 where num =
+		#{num}
+	</update>
+
+</mapper>

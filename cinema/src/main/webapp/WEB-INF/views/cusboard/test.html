@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카페 게시글</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .post-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .post-header h1 {
+            color: #333;
+            font-size: 28px;
+        }
+        .post-header img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .post-content {
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .button-container {
+            text-align: center;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-right: 10px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="post-header">
+            <h1>카페 게시글 제목</h1>
+            <img src="cafe_post_image.jpg" alt="카페 게시글 이미지">
+        </div>
+        <div class="post-content">
+            <p>카페 게시글 내용 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut libero a quam pretium ullamcorper. Nam dignissim metus quis neque vehicula, vel hendrerit tortor ullamcorper.</p>
+            <p>Etiam ut nulla non massa maximus lacinia nec sed nulla. Vivamus rhoncus lorem vel urna iaculis fringilla. Vivamus rhoncus lorem vel urna iaculis fringilla.</p>
+        </div>
+        <div class="button-container">
+            <button class="button">수정</button>
+            <button class="button">삭제</button>
+        </div>
+    </div>
+</body>
+</html>

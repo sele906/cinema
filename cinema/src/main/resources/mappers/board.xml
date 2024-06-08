@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="board">
+
+	<select id="search_count" resultType="int">
+		select count(*) from adminboard
+		<choose>
+			<when test="search_option != 'all'">
+				where ${search_option} like '%'||#{keyword}||'%'
+			</when>
+			<when test="search_option == 'all'">
+				where subject like '%'||#{keyword}||'%'
+				or contents
+				like '%'||#{keyword}||'%'
+			</when>
+		</choose>
+	</select>
+
+	<select id="search_list" resultType="com.example.cinema.dto.BoardDTO">
+		select * from (select rownum as rn,A.* from (
+		select
+		num,subject,contents,type,reg_date,see,filename,filesize from
+		adminboard b
+		<choose>
+			<when test="search_option !='all'">
+				where ${search_option} like '%'||#{keyword}||'%'
+			</when>
+			<when test="search_option='all'">
+				where subject like '%'||#{keyword}||'%'
+				or contents
+				like '%'||#{keyword}||'%'
+			</when>
+		</choose>
+		) A ) where rn between #{start} and #{end}
+	</select>
+
+	<select id="filename" resultType="String"> select filename from board
+		where num=#{num}
+	</select>
+	<!-- <update id="plus_down"> update board set down=down+1 where num=#{num} 
+		</update> <insert id="insert_comment"> insert into board_comment (comment_num, 
+		board_num, writer, contents) values ( (select nvl(max(comment_num) + 1, 1) 
+		from board_comment), #{board_num}, #{writer}, #{contents} ) </insert> <update 
+		id="update"> update board set writer=#{writer}, subject=#{subject}, contents=#{contents}, 
+		filename=#{filename}, filesize=#{filesize}, down=#{down} where num=#{num} 
+		</update> <delete id="delete"> delete from board where num=#{num} </delete> -->
+	<select id="list" resultType="com.example.cinema.dto.BoardDTO">
+		select * from (select rownum as
+		rn,A.* from(select
+		num,subject,type,contents,reg_date,see,filename,filesize from
+		adminboard b order by num desc) A ) where rn between #{start} and
+		#{end}
+	</select>
+
+	<select id="noti" resultType="com.example.cinema.dto.BoardDTO">
+		select * from (
+		select rownum as rn,
+		A.*
+		from (
+		select num, subject, contents, reg_date, see, filename,
+		filesize
+		from adminboard b
+		where type = #{type}
+		order by num
+		) A
+		)
+		where rn
+		between #{start} and #{end}
+	</select>
+
+	<insert id="insert">
+		insert into adminboard
+		(num,type,subject,contents,writer,filename,filesize)
+		values
+		(num_seq.nextval,#{type},#{subject},#{contents},'admin',#{filename},#{filesize})
+	</insert>
+
+	<select id="post" resultType="com.example.cinema.dto.BoardDTO">
+		select * from adminboard where
+		num=#{num}
+	</select>
+
+	<update id="update">
+		update adminboard set type=#{type},
+		subject=#{subject}, contents=#{contents}, filename=#{filename},
+		filesize=#{filesize}
+		where num=#{num}
+	</update>
+
+	<select id="count" resultType="int">
+		select count(*) from adminboard
+	</select>
+
+	<update id="see">
+		update adminboard set see = see + 1 where num =
+		#{num}
+	</update>
+
+	<delete id="delete">
+		delete from adminboard where num=#{num}
+	</delete>
+
+</mapper>

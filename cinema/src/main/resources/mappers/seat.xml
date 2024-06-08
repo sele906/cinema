@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="seat">
+
+<select id="saved" resultType="com.example.cinema.dto.SeatDTO">
+	select seat_name from seats 
+	where theater_num = #{theater_num} 
+	and cinema_place = #{cinema_place}
+	and time = #{time}
+</select>
+
+<select id="ticket_idx" resultType="int">
+	select ticket_idx
+	from seats
+	where theater_num=#{theater_num}
+	and seat_name=#{seat_name}
+	and userid=#{userid}
+	and cinema_place=#{cinema_place}
+	and time=#{time}
+</select>
+
+<insert id="insert">
+	insert into seats 
+	values 
+	(ticket_seq.nextval, #{theater_num}, #{seat_name}, #{userid}, #{cinema_place}, #{time})
+</insert>
+
+<delete id="seat_delete">
+	delete from seats where ticket_idx = #{ticket_idx}
+</delete>
+
+<delete id="booking_delete">
+	delete from booking where ticket_idx = #{ticket_idx}
+</delete>
+
+<select id="book_ticket" resultType="java.util.Map">
+	select 
+	ticket_idx, userid, movieCd, 
+	movie_title, imgpath, cinema_place, 
+	theater_num, seat_name, time,
+	price, time_idx
+	from booking
+	where userid = #{userid}
+	order by ticket_idx desc
+</select>
+
+<insert id="book_ticket_insert">
+	insert into booking
+	select 
+	s.ticket_idx, s.userid, m.movieCd, m.movie_title, m.imgpath,
+	s.cinema_place, s.theater_num, s.seat_name, s.time, m.price, t.time_idx
+	from movie m, time t, seats s
+	where m.movie_title = t.movie_title
+	and s.ticket_idx = #{ticket_idx}
+	and t.time_idx = #{time_idx}
+	and userid= #{userid}
+</insert>
+
+</mapper>
