@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Map;
-
+ 
 public class ApiCaller {
 	public static String callApi(String apiUrl, Map<String, String> params) throws IOException {
 		// API 호출 및 응답을 문자열로 반환하는 코드 작성
