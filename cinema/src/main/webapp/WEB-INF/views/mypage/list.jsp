@@ -11,6 +11,10 @@
 <title>Insert title here</title>
 <style>
 
+footer {
+    margin: 50px 0 0 0;
+}
+
 .foot {
 	margin: 0 10%;
 }
@@ -27,17 +31,7 @@
 	color: red;
 }
 
-header {
-	text-align: center;
-	background-color: #222;
-	color: white;
-	padding: 0px 40px 0px 40px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-	bottom: 0;
-}
+
 
 .sidebar {
 	float: left; /* 왼쪽으로 부유시킵니다. */
