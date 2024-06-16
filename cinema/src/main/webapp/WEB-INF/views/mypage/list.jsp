@@ -10,6 +10,11 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
+
+.foot {
+	margin: 0 10%;
+}
+
 .section1 {
 	margin: 0 10%;
 }
@@ -247,6 +252,9 @@ table td:nth-child(2) {
 		</table>
 
 	</div>
+
+	<%@ include file="../include/footer.jsp" %>s
+
 </body>
 <script>
 function deleteReview(review_id) {

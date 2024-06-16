@@ -48,14 +48,6 @@ body {
 	width: 100%;
 }
 
-/* footer {
-	background-color: #eee;
-}
-
-.foot {
-	margin: 0 330px;
-} */
-
 /*@media ( max-width : 1600px) {
 	body {
 		margin: 0;
