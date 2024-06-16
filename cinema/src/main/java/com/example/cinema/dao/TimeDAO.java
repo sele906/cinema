@@ -35,7 +35,7 @@ public class TimeDAO {
 	}
 
 	public void insertMovieInfo(Map<String, Object> map) {
-		sqlSession.insert("movie_info_insert", map);
+		sqlSession.insert("time.movie_info_insert", map);
 	}
 
 	public int sameMovie(int movieCd) {

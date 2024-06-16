@@ -14,8 +14,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.example.cinema.api.ApiCaller;
 import com.example.cinema.dao.MemberDAO;
@@ -171,11 +173,11 @@ public class TicketController {
 
 			model.addAttribute("map", map);
 
-			int theaterNum = Integer.parseInt(map.get("THEATER_NUM").toString());
-			String cinemaPlace = map.get("CINEMA_PLACE").toString();
+			int theaterNum = Integer.parseInt(map.get("theater_num").toString());
+			String cinemaPlace = map.get("cinema_place").toString();
 
 			// 문자열 time 을 date 타입으로 바꾸기
-			String time = map.get("TIME").toString();
+			String time = map.get("time").toString();
 			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 			java.util.Date datetime = null;
 			java.sql.Date sqlDate = null;
@@ -247,7 +249,7 @@ public class TicketController {
 		List<SeatDTO> list = seatDao.savedSeats(dto);
 		model.addAttribute("list", list);
 		
-		return "ticket/theater_seats_screen";
+		return "/ticket/theater_seats_screen";
 	}
 	
 	//좌석 데이터 저장 후 > 예매 페이지
@@ -367,7 +369,7 @@ public class TicketController {
 		// 영화코드를 영화이름으로 바꾸기
 		Map<String, Object> Mmap = new HashMap<String, Object>();
 		Mmap = timeDao.getMovieInfo(movieCd);
-		String movie_title = Mmap.get("MOVIE_TITLE").toString();
+		String movie_title = Mmap.get("movie_title").toString();
 		
 		// 데이터 넣기
 		TimeDTO Tdto = new TimeDTO();
@@ -415,11 +417,11 @@ public class TicketController {
 
 		} else { // 로그인된 상태면
 
-			int theaterNum = Integer.parseInt(map.get("THEATER_NUM").toString());
-			String cinemaPlace = map.get("CINEMA_PLACE").toString();
+			int theaterNum = Integer.parseInt(map.get("theater_num").toString());
+			String cinemaPlace = map.get("cinema_place").toString();
 
 			// 문자열 time 을 date 타입으로 바꾸기
-			String time = map.get("TIME").toString();
+			String time = map.get("time").toString();
 			SimpleDateFormat dateFormat1 = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 			java.util.Date datetime1 = null;
 			java.sql.Date sqlDate1 = null;

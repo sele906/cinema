@@ -24,15 +24,6 @@ body {
 	font-family: Arial, sans-serif;
 }
 
-.section1 {
-	/* background-color: black; */
-	background: linear-gradient(to top, black, #333, #444);
-	/*background-color: #222;*/
-	/*background: linear-gradient(to right, red, black, red, black, red, black, red, black, red, black, #222, #222, #222, #222, #222, #222, #222, #222, #222, black, red, black, red, black, red, black, red, black, red);
-	*/
-	padding: 0px;
-	width: 100%;
-}
 
 .section2 {
 	background-color: black;
@@ -53,162 +44,19 @@ body {
 	width: 100%;
 }
 
-footer {
+/* footer {
 	background-color: #eee;
 }
 
 .foot {
 	margin: 0 330px;
-}
+} */
 
 /*@media ( max-width : 1600px) {
 	body {
 		margin: 0;
 	}
 }*/
-header {
-	margin: 0 330px;
-	text-align: center;
-	/* background-color: linear-gradient(to bottom, black, white); */
-	/* 	background-color: linear-gradient(to top, black, #333, #888); */
-	color: white;
-	padding: 0px 40px 0px 40px;
-	display: flex;
-	/* justify-content: space-between; */
-	align-items: center;
-	bottom: 0;
-}
-
-.logo img {
-	width: 150px;
-	height: auto;
-}
-
-.logo2 {
-	display: inline-block; /* 가로로만 공간을 차지하도록 설정합니다. */
-}
-
-.logo2 img {
-	display: block;
-	margin: 0 auto;
-	padding-top: 100px;
-	padding-left: 120px;
-}
-
-.main-menu {
-	display: flex;
-	gap: 5px;
-	font-size: 16px;
-	/*padding-top: 100px;*/
-}
-
-.main-menu a {
-	color: white;
-	text-decoration: none;
-	font-weight: bold;
-	font-size: 16px;
-	transition: color 0.3s ease;
-}
-
-.main-menu a:hover {
-	color: #ffcc00;
-}
-
-.bigmenu {
-	margin: 0 0px;
-	/* background-color: #222; */
-	background-color: none;
-	color: white;
-	padding: 100px 20px 10px 60px;
-	display: flex;
-	/* justify-content: space-between; */
-	align-items: center;
-	
-}
-
-.bigmenu ul {
-	list-style-type: none;
-	margin: 0 0 0 0px;
-	padding: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.bigmenu ul li {
-	position: relative;
-	margin-right: 5px;
-	padding: 0 20px;
-	font-weight: bold;
-	transition: color 0.3s ease;
-	white-space: nowrap;
-}
-
-.bigmenu ul li a {
-	color: white;
-	text-decoration: none;
-	font-weight: bold;
-	transition: color 0.3s ease;
-}
-
-.bigmenu ul li a:hover {
-	color: #ffcc00;
-}
-
-.combo-box {
-	position: relative;
-	cursor: pointer;
-}
-
-.submenu {
-	display: none;
-	position: absolute;
-	direction: row;
-	top: 100%;
-	left: 0;
-	background-color: #222;
-	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-	z-index: 1;
-	list-style: none;
-	padding: 0px;
-	display: flex;
-	flex-wrap: wrap;
-	/*justify-content: space-between;*/
-}
-
-.submenu a {
-	color: white;
-	text-decoration: none;
-	display: block;
-	padding: 1px 1px;
-	transition: background-color 0.3s ease;
-}
-
-.submenu a:hover {
-	background-color: #777;
-}
-
-.search {
-	margin-left: auto;
-	display: flex;
-	align-items: center;
-}
-
-.search input {
-	padding: 8px;
-	border: none;
-	border-radius: 4px;
-	margin-right: 10px;
-}
-
-.search button {
-	border: none;
-	background: url('search-icon.png') no-repeat center center;
-	background: cover;
-	width: 20px;
-	height: 20px;
-	cursor: pointer;
-}
 
 .poster {
 	margin: 0 330px;
@@ -337,7 +185,9 @@ header {
 </head>
 
 <body>
-	<div class="section1">
+
+
+	<%-- <div class="section1">
 		<header>
 
 			<div class="logo">
@@ -419,7 +269,9 @@ header {
 
 		
 
-	</div>
+	</div> --%>
+	
+	<%@ include file="include/menu.jsp" %> 
 
 <div class="section2">
     <div style="position: relative; width: 1472px; height: 475px; margin: 0 auto;">
@@ -774,23 +626,8 @@ header {
               document.querySelector('.downimg').style.display = 'none';
           }
       </script>
-
-
-		<footer style="background: #eee; margin: 0; padding: 50px 0 50px 0">
-			<div class="foot">
-				<hr style="border: 1px solid #ccc; margin: 0 0 50px 0;">
-				<div
-					style="color: #666; padding: 10px; line-height: 0.7; font-size: 12px">
-					<p>&copy; 2024 SSANG YONG CINEMA. All rights reserved.</p>
-					<p>(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)</p>
-					<p>대표이사 : 한승찬 / 사업자등록번호 : 104-81-45690 / 통신판매업신고번호 :
-						2017-서울용산-0662 사업자정보확인</p>
-					<p>호스팅사업자 : 쌍용엔터테이먼트 / 대표이메일 : hanseung@naver.com</p>
-					<div style="margin-top: 10px;">
-						<a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a>
-					</div>
-				</div>
-			</div>
-		</footer>
+      
+      <%@ include file="include/footer.jsp" %>
+      
 </body>
 </html>

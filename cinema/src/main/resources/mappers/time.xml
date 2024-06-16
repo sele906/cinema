@@ -3,24 +3,24 @@
 <mapper namespace="time">
 
 <select id="cinema_place" resultType="com.example.cinema.dto.TimeDTO">
-	select DISTINCT movie_title, cinema_place, to_char(time,'YYYY-MM-DD') time
-	from time
+	select DISTINCT movie_title, cinema_place, DATE_FORMAT(time.time,'%Y-%m-%d') time
+	from `time`
 	where movie_title=#{movie_title}
 	and cinema_place=#{cinema_place}
 </select>
 
 <select id="time" resultType="com.example.cinema.dto.TimeDTO">
-	select time_idx, to_char(time,'HH24:MI') time, theater_num
-	from time
-	where movie_title=#{movie_title}
-	and cinema_place=#{cinema_place}
-	and to_char(time,'YYYY-MM-DD') = #{time}
-	order by time
+	SELECT time_idx, DATE_FORMAT(`time`.time, '%H:%i') AS time, theater_num
+	FROM `time`
+	WHERE movie_title = #{movie_title}
+	  AND cinema_place = #{cinema_place}
+	  AND DATE_FORMAT(`time`.time, '%Y-%m-%d') = #{time}
+	ORDER BY `time`.time
 </select>
 
 <select id="userMovie" resultType="java.util.Map">
 	select 
-	movieCd, m.movie_title, imgpath, price, cinema_place, to_char(time,'YYYY-MM-DD HH24:MI') time, theater_num
+	movieCd, m.movie_title, imgpath, price, cinema_place, Y time, theater_num
 	from movie m, time t
 	where m.movie_title = t.movie_title
 	and time_idx=#{time_idx}
@@ -50,7 +50,7 @@
 
 <select id="getTimeIdx" resultType="int">
 	select time_idx
-	from time 
+	from `time`
 	where cinema_place = #{cinema_place}
 	and movie_title = #{movie_title}
 	and time = #{datetime1}
@@ -58,9 +58,8 @@
 </select>
 
 <insert id="insertTime">
-	insert into time
+	insert into time (cinema_place, movie_title, time, theater_num)
 	values (
-		time_seq.nextval,
 		#{cinema_place},
 		#{movie_title},
 		#{datetime1},

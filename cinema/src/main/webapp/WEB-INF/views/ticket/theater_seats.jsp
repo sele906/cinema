@@ -69,12 +69,14 @@ $(function(){
 			"theaterNum":theaterNum,
 			"cinemaPlace":cinemaPlace,
 			"time_idx":time_idx
-			}
+	};
+	
 	$.ajax({
-		type: "post",
-		url: "${path}/ticket/seat_screen.do",
+		url: "/ticket/seat_screen.do",
+		type: "POST",
 		data: params,
 		success: function(txt){
+			console.log(txt);
 			$("#seatBox").html(txt);
 		}
 	});
@@ -97,14 +99,14 @@ $(function(){
 <div id="getitem">
 	가져온 값<br>
 	아이디: <input type="text" id="id" value="${sessionScope.userid}"><br>
-	포스터이미지경로: <input type="text" id="imgpath" value="${map.IMGPATH}"><br>
-	영화제목: <input type="text" id="movieTitle" value="${map.MOVIE_TITLE}"><br>
-	금액: <input type="text" id="moviePrice" value="${map.PRICE}"><br>
-	시간: <input type="text" id="movieTime" value="${map.TIME}"><br>
-	상영관: <input type="text" id="theaterNum" value="${map.THEATER_NUM}"><br>
-	영화관: <input type="text" id="cinemaPlace" value="${map.CINEMA_PLACE}"><br>
+	포스터이미지경로: <input type="text" id="imgpath" value="${map.imgpath}"><br>
+	영화제목: <input type="text" id="movieTitle" value="${map.movie_title}"><br>
+	금액: <input type="text" id="moviePrice" value="${map.price}"><br>
+	시간: <input type="text" id="movieTime" value="${map.time}"><br>
+	상영관: <input type="text" id="theaterNum" value="${map.theater_num}"><br>
+	영화관: <input type="text" id="cinemaPlace" value="${map.cinema_place}"><br>
 	
-	영화코드: <input type="text" id="movieCd" value="${map.MOVIECD}"><br>
+	영화코드: <input type="text" id="movieCd" value="${map.movieCd}"><br>
 	시간코드: <input type="text" id="time_idx" value="${time_idx}"><br>
 </div>
 

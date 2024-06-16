@@ -334,10 +334,11 @@ $(function(){
         //시간표 보여주기
         if (cinema_place != "") {
 			$.ajax({
-				type: "post",
-				url: "${path}/ticket/movie_place.do",
+				type: "POST",
+				url: "/ticket/movie_place.do",
 				data: params,
 				success: function(txt){
+					console.log(txt);
 					$("#choose_day").css({
 						"display": "flex", 
 						"flex-direction": "column"
@@ -372,8 +373,8 @@ $(document).on('click','.day_box', function(){ //날짜 선택
     //영화시간 보여주기
     if (cinema_place != "") {
 		$.ajax({
-			type: "post",
-			url: "${path}/ticket/movie_time.do",
+			type: "POST",
+			url: "/ticket/movie_time.do",
 			data: params,
 			success: function(txt){
 				$("#choose_time").css({
@@ -443,8 +444,8 @@ $(document).on('click','.time_box', function(){ //시간 선택
 		
 		<!-- input 전달값 숨기기 -->
 		<input name="movie_code" id="movie_code" value="${movieCd}">
-		<input name="movie_title" id="movie_title" value="${map.MOVIE_TITLE}">
-		<input name="movie_price" value="${map.PRICE}">
+		<input name="movie_title" id="movie_title" value="${map.movie_title}">
+		<input name="movie_price" value="${map.price}">
 		
 		</div>
 		
