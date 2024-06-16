@@ -20,9 +20,9 @@
 </select>
 
 <insert id="insert">
-	insert into seats 
+	insert into seats(theater_num, seat_name, userid, cinema_place, time) 
 	values 
-	(ticket_seq.nextval, #{theater_num}, #{seat_name}, #{userid}, #{cinema_place}, #{time})
+	(#{theater_num}, #{seat_name}, #{userid}, #{cinema_place}, #{time})
 </insert>
 
 <delete id="seat_delete">

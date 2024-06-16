@@ -20,7 +20,7 @@
 
 <select id="userMovie" resultType="java.util.Map">
 	select 
-	movieCd, m.movie_title, imgpath, price, cinema_place, Y time, theater_num
+	movieCd, m.movie_title, imgpath, price, cinema_place, DATE_FORMAT(t.time, '%Y-%m-%d %H:%i') AS time, theater_num
 	from movie m, time t
 	where m.movie_title = t.movie_title
 	and time_idx=#{time_idx}

@@ -6,13 +6,9 @@
 footer {
 	background-color: #eee;
 }
-
-.foot {
-	margin: 0 330px;
-}
 </style>
 
-<footer style="background: #eee; margin: 0; padding: 50px 0 50px 0">
+<footer style="background: #eee; padding: 50px 0 50px 0">
 	<div class="foot">
 		<hr style="border: 1px solid #ccc; margin: 0 0 50px 0;">
 		<div

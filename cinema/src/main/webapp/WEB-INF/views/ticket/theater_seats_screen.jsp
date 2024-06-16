@@ -116,7 +116,7 @@
 	function requestPay() {
 		var amount = document.getElementById("movie_price").value;
 		console.log(amount);
-	IMP.init('imp68066408'); //iamport 대신 자신의 "가맹점 식별코드"를 사용
+	IMP.init('imp42661322'); //iamport 대신 자신의 "가맹점 식별코드"를 사용
 	IMP.request_pay({
 		pg : "kakaopay",
 		pay_method : "card",

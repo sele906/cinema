@@ -11,7 +11,7 @@
 <title>Insert title here</title>
 <style>
 .section1 {
-	margin: 0 330px;
+	margin: 0 10%;
 }
 
 .main-menu a:hover {

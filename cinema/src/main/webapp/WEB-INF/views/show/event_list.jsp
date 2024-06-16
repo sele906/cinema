@@ -11,10 +11,14 @@
     body {
         margin: 0;
     }
+    
+    .foot {
+		margin: 0 10%;
+	}
 
     .container {
         max-width: 1000px;
-        margin: 0 auto;
+        margin: 0 10%;
         padding: 0 20px;
         font-size: 18px;
         font-weight: bold;
@@ -97,5 +101,8 @@
         </c:forEach>
     </div>
 </div> 
+
+<%@ include file="../include/footer.jsp" %>
+
 </body>
 </html>

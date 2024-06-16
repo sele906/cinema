@@ -1,5 +1,6 @@
 package com.example.cinema.controller;
 
+import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -55,7 +56,7 @@ public class TicketController {
 	
 		// API 호출에 필요한 정보 설정
 		String apiUrl = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieInfo.json";
-		String apiKey = "4ed2f64a7d20045f0edf7f9c77955da3"; // 실제 API 키로 교체
+		String apiKey = "f13c0057896b0be1847c420d8c9d265b"; // 실제 API 키로 교체
 	
 		// 매개변수 설정 (필요에 따라 수정)
 		Map<String, String> params = new HashMap<>();
@@ -180,11 +181,11 @@ public class TicketController {
 			String time = map.get("time").toString();
 			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 			java.util.Date datetime = null;
-			java.sql.Date sqlDate = null;
+			Timestamp sqlDate = null;
 			try {
 				datetime = dateFormat.parse(time);
 				// java.util.Date를 java.sql.Date로 변환
-				sqlDate = new java.sql.Date(datetime.getTime());
+				sqlDate = new Timestamp(datetime.getTime());
 			} catch (ParseException e) {
 				e.printStackTrace();
 			}
@@ -222,11 +223,11 @@ public class TicketController {
 		
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 		java.util.Date datetime = null;
-		java.sql.Date sqlDate = null;
+		Timestamp sqlDate = null;
 		try {
 			datetime = dateFormat.parse(movieTime);
 			// java.util.Date를 java.sql.Date로 변환
-			sqlDate = new java.sql.Date(datetime.getTime());
+			sqlDate = new Timestamp(datetime.getTime());
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
@@ -279,11 +280,11 @@ public class TicketController {
 		// 문자열 time 을 date 타입으로 바꾸기
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 		java.util.Date datetime = null;
-		java.sql.Date sqlDate = null;
+		Timestamp sqlDate = null;
 		try {
 			datetime = dateFormat.parse(movieTime);
 			// java.util.Date를 java.sql.Date로 변환
-			sqlDate = new java.sql.Date(datetime.getTime());
+			sqlDate = new Timestamp(datetime.getTime());
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
@@ -363,6 +364,7 @@ public class TicketController {
 			@RequestParam(name = "theater_num") int theater_num,
 			Model model
 	) {
+		
 		//세션
 		String userid = (String) session.getAttribute("userid");
 		
@@ -380,16 +382,16 @@ public class TicketController {
 		// 문자열 time 을 date 타입으로 바꾸기
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 		java.util.Date datetime = null;
-		java.sql.Date sqlDate = null;
+		Timestamp sqlTimestamp = null;
 		try {
 			datetime = dateFormat.parse(time1);
 			// java.util.Date를 java.sql.Date로 변환
-			sqlDate = new java.sql.Date(datetime.getTime());
+			sqlTimestamp = new Timestamp(datetime.getTime()); //날짜만 가져오는게 아니라 시간 분도 가져와야함
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
 
-		Tdto.setDatetime1(sqlDate);
+		Tdto.setDatetime1(sqlTimestamp);
 
 		// 시간 인덱스 가져오기
 		int time_idx = timeDao.getTimeIdx(Tdto);
@@ -424,11 +426,11 @@ public class TicketController {
 			String time = map.get("time").toString();
 			SimpleDateFormat dateFormat1 = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 			java.util.Date datetime1 = null;
-			java.sql.Date sqlDate1 = null;
+			Timestamp sqlDate1 = null;
 			try {
 				datetime1 = dateFormat1.parse(time);
 				// java.util.Date를 java.sql.Date로 변환
-				sqlDate1 = new java.sql.Date(datetime1.getTime());
+				sqlDate1 = new Timestamp(datetime1.getTime());
 			} catch (ParseException e) {
 				e.printStackTrace();
 			}

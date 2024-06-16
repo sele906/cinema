@@ -24,6 +24,10 @@ body {
 	font-family: Arial, sans-serif;
 }
 
+.foot {
+	margin: 0 10%;
+}
+
 
 .section2 {
 	background-color: black;
@@ -152,130 +156,16 @@ body {
 		alert('로그아웃되었습니다.');
 	</script>
 </c:if>
-<script>
-	$(function() {
-		hideMenu(1);
-		hideMenu(2);
-		hideMenu(3);
-		hideMenu(4);
-		hideMenu(5);
-	});
-	function showMenu(menuNum) {
-		// 숨겨진 모든 서브메뉴를 숨김
-		for (let i = 1; i <= 5; i++) {
-			hideMenu(i);
-		}
-		// 선택된 메뉴의 서브메뉴를 표시
-		document.getElementById("submenu" + menuNum).style.display = "block";
-	}
-	function hideMenu(menuNum) {
-		document.getElementById("submenu" + menuNum).style.display = "none";
-	}
-	function keepShow(menuNum) {
-		clearTimeout(hideMenuTimeout);
-	}
-
-	function hideDelay(menuNum) {
-		hideMenuTimeout = setTimeout(function() {
-			hideMenu(menuNum);
-		}, 200); // 딜레이
-	}
-</script>
 
 </head>
 
 <body>
-
-
-	<%-- <div class="section1">
-		<header>
-
-			<div class="logo">
-				<a href="/"><img src="/resources/images/icon/mainlogo2black.png"
-					style="width: 250px; height: 150;">
-			</div>
-			
-			<div class="bigmenu">
-			<ul>
-				<li><a href="/moviechart.do" onmouseover="showMenu(1)"
-					onmouseout="hideDelay(1)" onmousemove="keepShow(1)">예매</a>
-					<ul class="submenu" id="submenu1" onmouseover="keepShow(1)"
-						onmouseout="hideDelay(1)">
-						<li><a href="/moviechart.do">영화먼저</a></li>
-						<li><a href="/findcinema.do">극장먼저</a></li>
-					</ul></li>
-				<li><a href="/moviechart.do" onmouseover="showMenu(2)"
-					onmouseout="hideDelay(2)" onmousemove="keepShow(2)">영화</a>
-					<ul class="submenu" id="submenu2" onmouseover="keepShow(2)"
-						onmouseout="hideDelay(2)">
-						<li><a href="/moviechart.do">영화 예매</a></li>
-						<li><a href="/moviechart.do">상영중인 영화</a></li>
-					</ul></li>
-				<li><a href="/findcinema.do" onmouseover="showMenu(3)"
-					onmouseout="hideDelay(3)" onmousemove="keepShow(3)">극장</a>
-					<ul class="submenu" id="submenu3" onmouseover="keepShow(3)"
-						onmouseout="hideDelay(3)">
-						<li><a href="/findcinema.do">극장 예매</a></li>
-						<li><a href="/findcinema.do">쌍용시네마 찾기</a></li>
-					</ul></li>
-				<li><a href="index.do" onmouseover="showMenu(4)"
-					onmouseout="hideDelay(4)" onmousemove="keepShow(4)">스토어</a>
-					<ul class="submenu" id="submenu4" onmouseover="keepShow(4)"
-						onmouseout="hideDelay(4)">
-						<li><a href="#">팝콘, 매점</a></li>
-						<li><a href="#">굿즈</a></li>
-					</ul></li>
-				<li><a href="/list.do" onmouseover="showMenu(5)"
-					onmouseout="hideDelay(5)" onmousemove="keepShow(5)">이벤트/혜택</a>
-					<ul class="submenu" id="submenu5" onmouseover="keepShow(5)"
-						onmouseout="hideDelay(5)">
-						<li><a href="#">진행중인 이벤트</a></li>
-						<li><a href="#">기프티콘</a></li>
-					</ul></li>
-			</ul>
-
-			<!-- <div class=search>
-				<input type="text" name="search" size="50">
-				<button style="border: none; background: none;"></button>
-			</div> -->
-		</div>
-			
-			<c:choose>
-				<c:when test='${sessionScope.userid==null}'>
-					<div class="main-menu">
-						 
-						<a href="/login.do">로그인</a>&nbsp;|&nbsp; <a
-							href="/member/register.do">회원가입</a>&nbsp;|&nbsp;<a
-							href="/mypage/detail.do">마이페이지</a>&nbsp;|&nbsp;<a
-							href="/cboard/main.do">고객센터</a>
-					</div>
-				</c:when>
-				<c:otherwise>
-					<div class="main-menu">
-						${sessionScope.name}님 환영합니다. <a
-							href="/member/logout.do"><img
-							src="/resources/images/icon/logout white.png"><br>로그아웃</a> |<a
-							href="/mypage/detail.do"><img
-							src="/resources/images/icon/mypage white.png"><br>마이페이지</a> | <a
-							href="/cboard/main.do"><img
-							src="/resources/images/icon/callcenter white.png"><br>고객센터</a>
-					</div>
-				</c:otherwise>
-			</c:choose>
-			
-			
-			
-		</header>
-
-		
-
-	</div> --%>
 	
 	<%@ include file="include/menu.jsp" %> 
 
-<div class="section2">
-    <div style="position: relative; width: 1472px; height: 475px; margin: 0 auto;">
-        <div style="position: absolute; top: 0; left: 0; margin-left:314px; width: 845px; height: 475px;">
+<div class="section2" style="padding: 40px 0;">
+    <div style="position: relative; width: 100%; height: 475px; margin: 0 auto;">
+        <div style="width: 80%; height: 475px; margin: 0 auto; display: flex; justify-content: center;">
             <img id="posterImage1" src="/resources/images/poster/grave.jpg" style="width: 845px; height: 475px; display: block;">
             <img id="posterImage2" src="/resources/images/poster/bude.jpg" style="width: 845px; height: 475px; display: none;">
             <img id="posterImage3" src="/resources/images/poster/kong.jpg" style="width: 845px; height: 475px; display: none;">
@@ -286,8 +176,8 @@ body {
         </div>
 
         <img id="playicon" src="/resources/images/icon/playicon.png" width="100px" height="100px" onclick="toggleVideo()" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); cursor: pointer;">
-        <img id="right" src="/resources/images/icon/right.png" width="50px" height="150px" onclick="toggleImage('next')" style="position: absolute; top: 50%; left: 100%; transform: translate(-50%, -50%); cursor: pointer;">
-        <img id="left" src="/resources/images/icon/left.png" width="50px" height="150px" onclick="toggleImage('prev')" style="position: absolute; top: 50%; left: 0; transform: translate(-50%, -50%); cursor: pointer;">
+        <img id="right" src="/resources/images/icon/right.png" width="50px" height="150px" onclick="toggleImage('next')" style="position: absolute; top: 50%; left: 95%; transform: translate(-50%, -50%); cursor: pointer;">
+        <img id="left" src="/resources/images/icon/left.png" width="50px" height="150px" onclick="toggleImage('prev')" style="position: absolute; top: 50%; left: 5%; transform: translate(-50%, -50%); cursor: pointer;">
 
         <div class="youtube" style="display: none;">
             <iframe id="youtubeVideo1" width="1472" height="475" src="https://youtube.com/embed/rjW9E1BR_30?autoplay=0&mute=1&controls=0&showinfo=0&modestbranding=1" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
@@ -415,12 +305,12 @@ body {
 
 		// API 호출에 필요한 정보 설정
 		String apiUrl = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json";
-		String apiKey = "975639d7befb5ab3b079a6f057165314"; // 실제 API 키로 교체
+		String apiKey = "f13c0057896b0be1847c420d8c9d265b"; // 실제 API 키로 교체
 
 		// 매개변수 설정 (필요에 따라 수정)
 		Map<String, String> params = new HashMap<>();
 		params.put("key", apiKey);
-		params.put("targetDt", yesterdayFormatted);
+		params.put("targetDt", "20240303");
 
 		try {
 			// API 호출
@@ -588,7 +478,7 @@ body {
            </div>
         </div>
         
-        <div style="border: 1px solid #ddd; border-radius: 20px; padding: 10px; width: 350px; margin : 0  10px;">
+<!--         <div style="border: 1px solid #ddd; border-radius: 20px; padding: 10px; width: 350px; margin : 0  10px;">
             <div style="display: flex; justify-content: space-between; align-items: center;">
                 <h2 style="margin: 10px;">굿즈</h2>
                 <button onclick="window.location.href='../store/index.jsp'" style="margin: 10px;">더보기</button>
@@ -605,7 +495,7 @@ body {
                <button onclick="window.location.href='/cinema/store_servlet/detail.do?product_code=267'" style="margin: 0 0 0 20px; padding: 0; border: none; background: none; cursor: pointer;"><img src="/resources/images/store/dunepad.jpg" style="width: 100px; height: 100px; margin:0 20px "></button>
               <button onclick="window.location.href='/cinema/store_servlet/detail.do?product_code=267'" style="margin: 0; padding: 0;border: none; background: none; cursor: pointer;"><p style= "font-size:16px ">듄 마우스패드<br>15,000원</p></button>
            </div>
-        </div>
+        </div> -->
         
       </div>
       

@@ -19,7 +19,7 @@ body {
 }
 
 .section1 {
-	margin: 0 330px; /* 왼쪽과 오른쪽 양쪽에 여백 추가 */
+	margin: 0 10%; /* 왼쪽과 오른쪽 양쪽에 여백 추가 */
 	padding: 0px;
 	width: auto;
 }
@@ -35,25 +35,28 @@ body {
 	padding: 40px 330px 10px 330px; /* 왼쪽과 오른쪽 양쪽에 여백 추가 */
 }
 
-footer {
-	background-color: #eee;
-}
-
-.foot {
-	margin: 0 330px;
-}
-
 header {
-	margin: 0 330px;
+	width: 100%;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#M_content {
+	width: 75%;
+	margin: 0 10%;
 	text-align: center;
 	background-color: white;
 	color: white;
-	padding: 0px 40px 0px 40px;
+	padding: 20px 40px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	/*box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /*그림자 효과야*/ */
 	bottom: 0;
+
 }
 
 .like-button {
@@ -89,7 +92,7 @@ header {
 	display: flex;
 	gap: 5px;
 	font-size: 16px;
-	padding-top: 100px;
+	padding: 50px 0 0 0;
 }
 
 .main-menu a {
@@ -105,16 +108,18 @@ header {
 }
 
 .bigmenu {
-	margin: 0 330px;
+	margin: 0 10%;
+	width: 75%;
 	background-color: #333;
 	color: white;
-	padding: 10px 20px;
+	padding: 10px 40px;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 }
 
 .bigmenu ul {
+	width: 100%;
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
@@ -126,7 +131,7 @@ header {
 .bigmenu ul li {
 	position: relative;
 	margin-right: 5px;
-	padding: 0 40px;
+	padding: 0 5%;
 	font-weight: bold;
 	transition: color 0.3s ease;
 	white-space: nowrap;
@@ -221,11 +226,10 @@ header {
 		hideMenu(2);
 		hideMenu(3);
 		hideMenu(4);
-		hideMenu(5);
 	});
 	function showMenu(menuNum) {
 		// 숨겨진 모든 서브메뉴를 숨김
-		for (let i = 1; i <= 5; i++) {
+		for (let i = 1; i <= 4; i++) {
 			hideMenu(i);
 		}
 		// 선택된 메뉴의 서브메뉴를 표시
@@ -248,83 +252,88 @@ header {
 <body>
 	<header>
 
-		<div class="logo">
-			<a href="/"><img
-				src="/resources/images/icon/mainlogo2white.png"
-				style="width: 250px; height: 150;">
+		<div id="M_content">
+		
+				<div class="logo">
+					<a href="/"><img
+						src="/resources/images/icon/mainlogo2white.png"
+						style="width: 250px; height: 150;">
+				</div>
+		
+				<c:choose>
+					<c:when test='${sessionScope.userid==null}'>
+						<div class="main-menu">
+							<a href="/login.do"><img
+								src="/resources/images/icon/login black.png"><br>로그인</a> | <a
+								href="/member/register.do"><img
+								src="/resources/images/icon/join black.png"><br>회원가입</a> | <a
+								href="/mypage/detail.do"><img
+								src="/resources/images/icon/mypage black.png"><br>마이페이지</a> | <a
+								href="/cboard/main.do"><img
+								src="/resources/images/icon/callcenter black.png"><br>고객센터</a>
+						</div>
+					</c:when>
+					<c:otherwise>
+						<div class="main-menu">
+							${sessionScope.name}님 환영합니다. <a
+								href="/member/logout.do"><img
+								src="/resources/images/icon/logout black.png"><br>로그아웃</a> |<a
+								href="/mypage/detail.do"><img
+								src="/resources/images/icon/mypage black.png"><br>마이페이지</a> | <a
+								href="/cboard/main.do"><img
+								src="/resources/images/icon/callcenter black.png"><br>고객센터</a>
+						</div>
+					</c:otherwise>
+				</c:choose>
+		
 		</div>
-
-		<c:choose>
-			<c:when test='${sessionScope.userid==null}'>
-				<div class="main-menu">
-					<a href="/login.do"><img
-						src="/resources/images/icon/login black.png"><br>로그인</a> | <a
-						href="/member/register.do"><img
-						src="/resources/images/icon/join black.png"><br>회원가입</a> | <a
-						href="/mypage/detail.do"><img
-						src="/resources/images/icon/mypage black.png"><br>마이페이지</a> | <a
-						href="/cboard/main.do"><img
-						src="/resources/images/icon/callcenter black.png"><br>고객센터</a>
+		
+			<nav class="bigmenu">
+				<ul>
+					<li><a href="/moviechart.do" onmouseover="showMenu(1)"
+						onmouseout="hideDelay(1)" onmousemove="keepShow(1)">예매</a>
+						<ul class="submenu" id="submenu1" onmouseover="keepShow(1)"
+							onmouseout="hideDelay(1)">
+							<li><a href="/moviechart.do">영화먼저</a></li>
+							<li><a href="/findcinema.do">극장먼저</a></li>
+						</ul></li>
+					<li><a href="/moviechart.do" onmouseover="showMenu(2)"
+						onmouseout="hideDelay(2)" onmousemove="keepShow(2)">영화</a>
+						<ul class="submenu" id="submenu2" onmouseover="keepShow(2)"
+							onmouseout="hideDelay(2)">
+							<li><a href="/moviechart.do">영화 예매</a></li>
+							<li><a href="/moviechart.do">상영중인 영화</a></li>
+						</ul></li>
+					<li><a href="/findcinema.do" onmouseover="showMenu(3)"
+						onmouseout="hideDelay(3)" onmousemove="keepShow(3)">극장</a>
+						<ul class="submenu" id="submenu3" onmouseover="keepShow(3)"
+							onmouseout="hideDelay(3)">
+							<li><a href="/findcinema.do">극장 예매</a></li>
+							<li><a href="/findcinema.do">쌍용시네마 찾기</a></li>
+						</ul></li>
+					<!-- <li><a href="../store/index.jsp" onmouseover="showMenu(4)"
+						onmouseout="hideDelay(4)" onmousemove="keepShow(4)">스토어</a>
+						<ul class="submenu" id="submenu4" onmouseover="keepShow(4)"
+							onmouseout="hideDelay(4)">
+							<li><a href="#">팝콘, 매점</a></li>
+							<li><a href="#">굿즈</a></li>
+						</ul></li> -->
+					<li><a href="/list.do" onmouseover="showMenu(4)"
+						onmouseout="hideDelay(4)" onmousemove="keepShow(4)">이벤트/혜택</a>
+						<ul class="submenu" id="submenu4" onmouseover="keepShow(4)"
+							onmouseout="hideDelay(4)">
+							<li><a href="/list.do">진행중인 이벤트</a></li>
+							<li><a href="/list.do">기프티콘</a></li>
+						</ul></li>
+				</ul>
+		
+				<div class=search>
+					<input type="text" name="search" size="50">
+					<button style="border: none; background: none;"></button>
 				</div>
-			</c:when>
-			<c:otherwise>
-				<div class="main-menu">
-					${sessionScope.name}님 환영합니다. <a
-						href="/member/logout.do"><img
-						src="/resources/images/icon/logout black.png"><br>로그아웃</a> |<a
-						href="/mypage/detail.do"><img
-						src="/resources/images/icon/mypage black.png"><br>마이페이지</a> | <a
-						href="/cboard/main.do"><img
-						src="/resources/images/icon/callcenter black.png"><br>고객센터</a>
-				</div>
-			</c:otherwise>
-		</c:choose>
+			</nav>
 
 	</header>
 
-	<nav class="bigmenu">
-		<ul>
-			<li><a href="/moviechart.do" onmouseover="showMenu(1)"
-				onmouseout="hideDelay(1)" onmousemove="keepShow(1)">예매</a>
-				<ul class="submenu" id="submenu1" onmouseover="keepShow(1)"
-					onmouseout="hideDelay(1)">
-					<li><a href="/moviechart.do">영화먼저</a></li>
-					<li><a href="/findcinema.do">극장먼저</a></li>
-				</ul></li>
-			<li><a href="/moviechart.do" onmouseover="showMenu(2)"
-				onmouseout="hideDelay(2)" onmousemove="keepShow(2)">영화</a>
-				<ul class="submenu" id="submenu2" onmouseover="keepShow(2)"
-					onmouseout="hideDelay(2)">
-					<li><a href="/moviechart.do">영화 예매</a></li>
-					<li><a href="/moviechart.do">상영중인 영화</a></li>
-				</ul></li>
-			<li><a href="/findcinema.do" onmouseover="showMenu(3)"
-				onmouseout="hideDelay(3)" onmousemove="keepShow(3)">극장</a>
-				<ul class="submenu" id="submenu3" onmouseover="keepShow(3)"
-					onmouseout="hideDelay(3)">
-					<li><a href="/findcinema.do">극장 예매</a></li>
-					<li><a href="/findcinema.do">쌍용시네마 찾기</a></li>
-				</ul></li>
-			<li><a href="../store/index.jsp" onmouseover="showMenu(4)"
-				onmouseout="hideDelay(4)" onmousemove="keepShow(4)">스토어</a>
-				<ul class="submenu" id="submenu4" onmouseover="keepShow(4)"
-					onmouseout="hideDelay(4)">
-					<li><a href="#">팝콘, 매점</a></li>
-					<li><a href="#">굿즈</a></li>
-				</ul></li>
-			<li><a href="/list.do" onmouseover="showMenu(5)"
-				onmouseout="hideDelay(5)" onmousemove="keepShow(5)">이벤트/혜택</a>
-				<ul class="submenu" id="submenu5" onmouseover="keepShow(5)"
-					onmouseout="hideDelay(5)">
-					<li><a href="#">진행중인 이벤트</a></li>
-					<li><a href="#">기프티콘</a></li>
-				</ul></li>
-		</ul>
-
-		<div class=search>
-			<input type="text" name="search" size="50">
-			<button style="border: none; background: none;"></button>
-		</div>
-	</nav>
 	
 </body>

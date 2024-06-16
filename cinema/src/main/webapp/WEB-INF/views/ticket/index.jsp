@@ -138,7 +138,7 @@ body {
 	font-weight: bold;
 	border-bottom: 1px grey solid;
 }
-.places:nth-child(9) {
+.places:last-child {
 	border: none;
 }
 
@@ -435,9 +435,9 @@ $(document).on('click','.time_box', function(){ //시간 선택
 		
 		<div class="item">
 		
-		<img src="/resources/images/poster/${map.IMGPATH}" width="200px" height="300px">
+		<img src="/resources/images/poster/${map.imgpath}" width="200px" height="300px">
 		
-		<h2>${map.MOVIE_TITLE}</h2>
+		<h2>${map.movie_title}</h2>
 		
 		
 		<p>13000원</p>
@@ -522,7 +522,7 @@ $(document).on('click','.time_box', function(){ //시간 선택
 </div>
 
 
-
+<%@ include file="include/footer.jsp" %>
 
 </body>
 </html>

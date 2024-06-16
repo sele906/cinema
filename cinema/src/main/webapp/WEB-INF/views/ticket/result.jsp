@@ -207,7 +207,7 @@ span {
 	        <c:forEach var="row" items="${bookTickets}">
 	            <tr>
 	           		<!-- 포스터 -->
-	                <td><img src="${path}/images/poster/${row.IMGPATH}"></td> 
+	                <td><img src="/resources/images/poster/${row.imgpath}"></td> 
 	                
 	                <!-- 영화정보 -->
 	                <td colspan="6">
@@ -215,22 +215,22 @@ span {
 		                	<tr>
 		                		<td class="timeIdx" colspan="3">
 		                			<span>예매번호</span>
-									<b>${row.TICKET_IDX}</b>
+									<b>${row.ticket_idx}</b>
 								</td>
 		                	</tr>
 	                		<tr>
-	                			<td class="Mtitle" colspan="3"><b>${row.MOVIE_TITLE}</b></td>
+	                			<td class="Mtitle" colspan="3"><b>${row.movie_title}</b></td>
 	                		</tr>
 		                	<tr>
 		                		<td colspan="3">
 		                			<div class="Minfo1">
 			                			<div>
 			                				<span>관람극장</span>
-			                				${row.CINEMA_PLACE}
+			                				${row.cinema_place}
 			                			</div>
 			                			<div>
 			                				<span>금액</span>
-			                				${row.PRICE}원
+			                				${row.price}원
 			                			</div>
 		                			</div>
 		                		</td>
@@ -242,14 +242,14 @@ span {
 				                	<div class="Minfo2">
 			                			<div class="Mseats">
 			                				<span>상영관&nbsp;</span>
-			                				<div>${row.THEATER_NUM}관</div>
-			                				<div>${row.SEAT_NAME}</div>
+			                				<div>${row.theater_num}관</div>
+			                				<div>${row.seat_name}</div>
 			                			</div>
 			                			
 			                			<div>
 			                				<span>상영일시</span>
-			                				<fmt:formatDate value="${row.TIME}" pattern="yyyy-MM-dd" var="day"/>
-				                			<fmt:formatDate value="${row.TIME}" pattern="HH:mm" var="time"/>
+			                				<fmt:formatDate value="${row.time}" pattern="yyyy-MM-dd" var="day"/>
+				                			<fmt:formatDate value="${row.time}" pattern="HH:mm" var="time"/>
 			                				${day}&nbsp;${time}
 			                			</div>
 		                			</div>
@@ -261,7 +261,7 @@ span {
 	                <!-- 예매취소 -->
 	                <td>
 		                <div id="cancel_area">
-		                	<input type="checkbox" class="checkbox" name="Tnum" value="${row.TICKET_IDX}">
+		                	<input type="checkbox" class="checkbox" name="Tnum" value="${row.ticket_idx}">
 		                	<input type="button" class="cancel" value="예매취소">
 		                </div>
 	                </td>

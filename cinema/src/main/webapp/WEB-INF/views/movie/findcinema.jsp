@@ -35,18 +35,15 @@ body {
 }
 
 footer {
-	background-color: #eee;
-	margin: 0px;
-	padding: 0;
+	margin: 0 10%;
 }
 
 .foot {
-	margin: 0 330px;
-	padding: 0px;
+	margin: 0 10%;
 }
 
 header {
-	margin: 0 330px;
+	margin: 0 10%;
 	text-align: center;
 	background-color: white;
 	color: white;
@@ -60,7 +57,7 @@ header {
 
 .section1 {
 	padding: 30px;
-	margin: 0 330px;
+	margin: 0 10%;
 	background: white;
 }
 
@@ -84,7 +81,7 @@ header {
 	display: flex;
 	gap: 5px;
 	font-size: 16px;
-	padding-top: 100px;
+	padding: 20px 0 30px 0;
 }
 
 .main-menu a {
@@ -100,16 +97,17 @@ header {
 }
 
 .bigmenu {
-	margin: 0 330px;
+	margin: 0 10%;
 	background-color: #333;
 	color: white;
 	padding: 10px 20px;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 }
 
 .bigmenu ul {
+	width: 100%;
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
@@ -121,7 +119,7 @@ header {
 .bigmenu ul li {
 	position: relative;
 	margin-right: 5px;
-	padding: 0 40px;
+	padding: 0 5%;
 	font-weight: bold;
 	transition: color 0.3s ease;
 	white-space: nowrap;
@@ -172,7 +170,6 @@ header {
 }
 
 .search {
-	margin-left: auto;
 	display: flex;
 	align-items: center;
 }
@@ -382,11 +379,10 @@ header {
 		hideMenu(2);
 		hideMenu(3);
 		hideMenu(4);
-		hideMenu(5);
 	});
 	function showMenu(menuNum) {
 		// 숨겨진 모든 서브메뉴를 숨김
-		for (let i = 1; i <= 5; i++) {
+		for (let i = 1; i <= 4; i++) {
 			hideMenu(i);
 		}
 		// 선택된 메뉴의 서브메뉴를 표시
@@ -498,19 +494,19 @@ header {
 					<li><a href="/findcinema.do">극장 예매</a></li>
 					<li><a href="/findcinema.do">쌍용시네마 찾기</a></li>
 				</ul></li>
-			<li><a href="../store/index.jsp" onmouseover="showMenu(4)"
+			<!-- <li><a href="../store/index.jsp" onmouseover="showMenu(4)"
 				onmouseout="hideDelay(4)" onmousemove="keepShow(4)">스토어</a>
 				<ul class="submenu" id="submenu4" onmouseover="keepShow(4)"
 					onmouseout="hideDelay(4)">
 					<li><a href="#">팝콘, 매점</a></li>
 					<li><a href="#">굿즈</a></li>
-				</ul></li>
-			<li><a href="../show/index.jsp" onmouseover="showMenu(5)"
-				onmouseout="hideDelay(5)" onmousemove="keepShow(5)">이벤트/혜택</a>
-				<ul class="submenu" id="submenu5" onmouseover="keepShow(5)"
-					onmouseout="hideDelay(5)">
-					<li><a href="#">진행중인 이벤트</a></li>
-					<li><a href="#">기프티콘</a></li>
+				</ul></li> -->
+			<li><a href="/list.do" onmouseover="showMenu(4)"
+				onmouseout="hideDelay(4)" onmousemove="keepShow(4)">이벤트/혜택</a>
+				<ul class="submenu" id="submenu4" onmouseover="keepShow(4)"
+					onmouseout="hideDelay(4)">
+					<li><a href="/list.do">진행중인 이벤트</a></li>
+					<li><a href="/list.do">기프티콘</a></li>
 				</ul></li>
 		</ul>
 
@@ -845,12 +841,12 @@ header {
 
 			// API 호출에 필요한 정보 설정
 			String apiUrl = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json";
-			String apiKey = "975639d7befb5ab3b079a6f057165314"; // 실제 API 키로 교체
+			String apiKey = "f13c0057896b0be1847c420d8c9d265b"; // 실제 API 키로 교체
 
 			// 매개변수 설정 (필요에 따라 수정)
 			Map<String, String> params = new HashMap<>();
 			params.put("key", apiKey);
-			params.put("targetDt", yesterdayFormatted);
+			params.put("targetDt", "20240303");
 			try {
 				// API 호출
 				String apiResponse = ApiCaller.callApi(apiUrl, params);
@@ -1073,22 +1069,7 @@ header {
 		</div>
 	</div>
 
-	<footer style="background: #eee; margin: 0; padding: 150px 0 50px 0">
-		<div class="foot">
-			<hr style="border: 1px solid #ccc; margin: 0 0 50px 0;">
-			<div
-				style="color: #666; padding: 10px; line-height: 0.7; font-size: 12px">
-				<p>&copy; 2024 SSANG YONG CINEMA. All rights reserved.</p>
-				<p>(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)</p>
-				<p>대표이사 : 한승찬 / 사업자등록번호 : 104-81-45690 / 통신판매업신고번호 :
-					2017-서울용산-0662 사업자정보확인</p>
-				<p>호스팅사업자 : 쌍용엔터테이먼트 / 대표이메일 : sycinema@gmail.com</p>
-				<div style="margin-top: 10px;">
-					<a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a>
-				</div>
-			</div>
-		</div>
-	</footer>
+	<%@ include file="../include/footer.jsp" %>
 
 <form name="form2" method="post" action="/ticket/MovieF.do" style="display: none;">
 

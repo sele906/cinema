@@ -31,47 +31,64 @@
 	</select>
 
 	<select id="search_list" resultType="com.example.cinema.dto.CboardDTO">
-		select * from (select rownum as rn,A.* from (
-		select
-		num,subject,contents,type,reg_date,see,filename,filesize from
-		adminboard b
-		<choose>
-			<when test="search_option !='all'">
-				where ${search_option} like '%'||#{keyword}||'%'
-			</when>
-			<when test="search_option='all'">
-				where subject like '%'||#{keyword}||'%'
-				or contents
-				like '%'||#{keyword}||'%'
-			</when>
-		</choose>
-		) A ) where rn between #{start} and #{end}
+	    select 
+	        num, 
+	        subject, 
+	        contents, 
+	        type, 
+	        reg_date, 
+	        see, 
+	        filename, 
+	        filesize 
+	    from adminboard b
+	    <choose>
+	        <when test="search_option != 'all'">
+	            where ${search_option} like CONCAT('%', #{keyword}, '%')
+	        </when>
+	        <when test="search_option == 'all'">
+	            where subject like CONCAT('%', #{keyword}, '%')
+	               or contents like CONCAT('%', #{keyword}, '%')
+	        </when>
+	    </choose>
+	    limit #{start}, #{end}
 	</select>
 	
 	<select id="csearch_list" resultType="com.example.cinema.dto.CboardDTO">
-		select * from (select rownum as rn,A.* from (
-		select
-		num,subject,contents,type,reg_date,see,filename,filesize from
-		adminboard b
-		<choose>
-			<when test="csearch_option !='all'">
-				where ${search_option} like '%'||#{keyword}||'%'
-			</when>
-			<when test="csearch_option='all'">
-				where subject like '%'||#{keyword}||'%'
-				or contents
-				like '%'||#{keyword}||'%'
-			</when>
-		</choose>
-		) A ) where rn between #{start} and #{end}
+	    select 
+	        num, 
+	        subject, 
+	        contents, 
+	        type, 
+	        reg_date, 
+	        see, 
+	        filename, 
+	        filesize 
+	    from adminboard b
+	    <choose>
+	        <when test="csearch_option != 'all'">
+	            where ${csearch_option} like CONCAT('%', #{keyword}, '%')
+	        </when>
+	        <when test="csearch_option == 'all'">
+	            where subject like CONCAT('%', #{keyword}, '%')
+	               or contents like CONCAT('%', #{keyword}, '%')
+	        </when>
+	    </choose>
+	    limit #{start}, #{end}
 	</select>
 	
 	<select id="list" resultType="com.example.cinema.dto.CboardDTO">
-		select * from (select rownum as
-		rn,A.* from(select
-		num,subject,type,contents,reg_date,see,filename,filesize from
-		adminboard b order by num desc) A ) where rn between #{start} and
-		#{end}
+	    select 
+	        num, 
+	        subject, 
+	        type, 
+	        contents, 
+	        reg_date, 
+	        see, 
+	        filename, 
+	        filesize 
+	    from adminboard b 
+	    order by num desc 
+	    limit #{start}, #{end}
 	</select>
 
 	<select id="view" resultType="com.example.cinema.dto.CboardDTO">
