@@ -94,7 +94,7 @@ body {
 }
 
 .movie-item p {
-	margin: 4px 0; /* 각 문단의 위아래 여백을 조절 */
+	margin: 4px 0;
 }
 
 .youtube {
