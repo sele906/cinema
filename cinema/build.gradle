@@ -6,6 +6,7 @@ plugins {
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
+apply plugin: 'war'
 
 java {
 	sourceCompatibility = '17'
@@ -20,6 +21,9 @@ configurations {
 repositories {
 	mavenCentral()
 }
+
+bootWar.enabled = true
+war.enabled = true
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
@@ -38,7 +42,9 @@ dependencies {
     implementation'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:3.0.0'
     implementation 'com.googlecode.json-simple:json-simple:1.1.1'
     implementation 'org.hibernate:hibernate-core:6.4.4.Final'
-    
+
+	implementation 'org.springframework.boot:spring-boot-starter-tomcat:3.2.4'
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat:3.2.4'
 	
 }
 

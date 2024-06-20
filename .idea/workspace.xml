@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="221be55d-f4b9-4bdd-b9ef-3361b3f9969d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/controller/CartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/dao/CartDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/dto/CartDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema/src/main/resources/mappers/cart.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/cinema.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cinema.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/cinema.cinema.main~1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/cinema.cinema.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/CinemaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/CinemaApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/cinema">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/cinema">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2i5PNcO0YTgCFYdmGsn1k9hwPHP" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;21&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/JAVA/cinema/cinema&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\JAVA\cinema\cinema\src\main\java\com\example\cinema\dto" />
+      <recent name="E:\JAVA\cinema\cinema\src\main\java\com\example\cinema\dao" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\JAVA\cinema\cinema\src\main\java\com\example\cinema\controller" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Smart Tomcat.tomcat">
+    <configuration name="CinemaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.cinema.CinemaApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.cinema.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="cinema [bootWar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/cinema" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootWar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="cinema [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/cinema" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="tomcat" type="com.poratu.idea.plugins.tomcat">
+      <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
+      <predefined_log_file enabled="true" id="Tomcat Access Log" />
+      <predefined_log_file id="Tomcat Catalina Log" />
+      <predefined_log_file id="Tomcat Manager Log" />
+      <predefined_log_file id="Tomcat Host Manager Log" />
+      <option name="catalinaBase" value="C:\Users\user\.SmartTomcat\cinema\cinema.cinema.main~1" />
+      <option name="contextPath" value="/" />
+      <option name="docBase" value="E:\JAVA\cinema\cinema" />
+      <option name="envOptions">
+        <map />
+      </option>
+      <option name="extraClassPath" value="" />
+      <option name="port" value="80" />
+      <option name="tomcatInfo">
+        <TomcatInfo>
+          <option name="name" value="Apache Tomcat/10.1.24" />
+          <option name="path" value="$PROJECT_DIR$/../tomcat10" />
+          <option name="version" value="10.1.24.0" />
+        </TomcatInfo>
+      </option>
+      <option name="vmOptions" value="" />
+      <module name="cinema.cinema" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="Gradle.BeforeRunTask" enabled="true" tasks="bootRun" externalProjectPath="$PROJECT_DIR$/cinema" vmOptions="" scriptParameters="" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.CinemaApplication" />
+      <item itemvalue="Gradle.cinema [bootWar]" />
+      <item itemvalue="Gradle.cinema [build]" />
+      <item itemvalue="Smart Tomcat.tomcat" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.cinema [build]" />
+        <item itemvalue="Gradle.cinema [bootWar]" />
+        <item itemvalue="Application.CinemaApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="221be55d-f4b9-4bdd-b9ef-3361b3f9969d" name="Changes" comment="" />
+      <created>1718777426788</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1718777426788</updated>
+    </task>
+    <servers />
+  </component>
+</project>
