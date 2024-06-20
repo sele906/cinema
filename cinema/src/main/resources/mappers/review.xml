@@ -3,8 +3,8 @@
 <mapper namespace="review">
 	<insert id="insert">
 		insert into review
-		(review_id,userid,moviecode,movieTitle, value, content)
-		values(seq_review.nextval,#{userid},#{moviecode},#{movieTitle},
+		(userid,moviecode,movieTitle, value, content)
+		values(#{userid},#{moviecode},#{movieTitle},
 		#{value}, #{content})
 	</insert>
 	<select id="list" resultType="com.example.cinema.dto.ReviewDTO">
@@ -16,17 +16,18 @@
 		review_id=#{review_id}
 	</delete>
 	<select id="listAll" resultType="com.example.cinema.dto.ReviewDTO">
-		select *
-		from (
-		select rownum as rn, A.*
-		from (
+		SELECT *
+		FROM (
+		SELECT @rownum := @rownum + 1 AS rn, A.*
+		FROM (
 		SELECT r.value, r.content, r.userid, m.filename
 		FROM review r
 		INNER JOIN member m ON r.userid = m.userid
 		WHERE r.moviecode = #{moviecode}
 		) A
-		)
-		where rn between #{start} and #{end}
+		CROSS JOIN (SELECT @rownum := 0) r
+		) B
+		WHERE rn BETWEEN #{start} AND #{end}
 	</select>
 	
 	<select id="count" resultType="int">

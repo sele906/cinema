@@ -4,23 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="221be55d-f4b9-4bdd-b9ef-3361b3f9969d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/controller/CartController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/dao/CartDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/dto/CartDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cinema/src/main/resources/mappers/cart.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/cinema.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cinema.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/cinema.cinema.main~1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/cinema.cinema.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/CinemaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/CinemaApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/resources/application.properties" afterDir="false" />
+    <list default="true" id="221be55d-f4b9-4bdd-b9ef-3361b3f9969d" name="Changes" comment="commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/resources/mappers/review.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/resources/mappers/review.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/ticket/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/ticket/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +84,7 @@
       <recent name="E:\JAVA\cinema\cinema\src\main\java\com\example\cinema\controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Smart Tomcat.tomcat">
+  <component name="RunManager" selected="Gradle.cinema [build]">
     <configuration name="CinemaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.cinema.CinemaApplication" />
       <extension name="coverage">
@@ -163,9 +150,6 @@
       <option name="catalinaBase" value="C:\Users\user\.SmartTomcat\cinema\cinema.cinema.main~1" />
       <option name="contextPath" value="/" />
       <option name="docBase" value="E:\JAVA\cinema\cinema" />
-      <option name="envOptions">
-        <map />
-      </option>
       <option name="extraClassPath" value="" />
       <option name="port" value="80" />
       <option name="tomcatInfo">
@@ -205,6 +189,19 @@
       <option name="presentableId" value="Default" />
       <updated>1718777426788</updated>
     </task>
+    <task id="LOCAL-00001" summary="commit">
+      <option name="closed" value="true" />
+      <created>1718855591896</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1718855591896</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
 </project>

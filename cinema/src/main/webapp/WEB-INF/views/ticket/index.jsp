@@ -522,7 +522,7 @@ $(document).on('click','.time_box', function(){ //시간 선택
 </div>
 
 
-<%@ include file="include/footer.jsp" %>
+<%@ include file="../include/footer.jsp" %>
 
 </body>
 </html>
