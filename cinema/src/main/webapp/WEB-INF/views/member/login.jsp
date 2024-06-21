@@ -143,19 +143,18 @@ form {
 				<div class=titleword>로그인</div>
 				<hr style="border: 1px solid #ccc; margin: 10px 0;">
 
-				<form id="loginForm" method="post"
-					action="/member/login.do">
+				<form id="loginForm" method="post">
 
 					<div style="display: flex; align-items: center;">
 						<div style="width: 260px;">
-							<input name="userid" placeholder="아이디를 입력하세요"
+							<input id="userid" name="userid" placeholder="아이디를 입력하세요"
 								style="width: 242px; height: 40px; margin-bottom: 5px;">
-							<input type="password" name="pwd1" placeholder="비밀번호를 입력하세요"
+							<input id="passwd" type="password" name="pwd1" placeholder="비밀번호를 입력하세요"
 								style="width: 250px; height: 41px;">
 						</div>
 						<div>
-							<input type="submit" value="로그인"
-								style="width: 90px; height: 90px; margin: 0 5px; font-size: 18px; font-weight: bold;">
+							<input type="button" value="로그인"
+								style="width: 90px; height: 90px; margin: 0 5px; font-size: 18px; font-weight: bold; background-color: #cc0000; color: white;" onclick="login('login')">
 						</div>
 					</div>
 					<p class="blue"
@@ -168,7 +167,10 @@ form {
 						<button onclick="openPopup2()"
 							style="border: none; background: none; cursor: pointer;">
 							비밀번호찾기</button>
-
+							&nbsp;&nbsp;/&nbsp;&nbsp;
+						<button onclick="login('admin')"
+							style="border: none; background: none; cursor: pointer;">
+							관리자</button>
 					</p>
 				</form>
 
@@ -204,6 +206,31 @@ form {
 		function closeimg2() {
 			// 이미지를 감싸고 있는 요소의 display 속성을 'none'으로 설정하여 숨깁니다.
 			document.querySelector('.sideimg').style.display = 'none';
+		}
+
+		function login(level) {
+
+			logindata = document.getElementById('loginForm');
+			userid = document.getElementById('userid');
+			passwd = document.getElementById('passwd');
+
+			if (userid == '') {
+				alert('아이디를 입력하세요');
+			}
+			if (passwd == '') {
+				alert('비밀번호를 입력하세요');
+			}
+
+			if (level == 'login') {
+				logindata.action="/member/login.do";
+				logindata.submit();
+			}
+
+			if (level == 'admin') {
+				logindata.action="/admin/login.do";
+				logindata.submit();
+			}
+
 		}
 	</script>
 

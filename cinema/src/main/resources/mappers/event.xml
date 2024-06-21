@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="show">
+<mapper namespace="event">
     <select id="list_event" resultType="com.example.cinema.dto.EventDTO">
         select * from event
     </select>
@@ -11,5 +11,26 @@
 
     <select id="listevent" resultType="com.example.cinema.dto.EventDTO">
         select * from event where type=#{type}
+    </select>
+
+    <insert id="insert">
+        insert into event (type, subject, contents, filename1,filename2) values (#{type}, #{subject},  #{contents}, #{filename1},#{filename2})
+    </insert>
+
+    <delete id="delete">
+        delete from event where num = #{num}
+    </delete>
+
+    <update id="update">
+        update event set  subject = #{subject}, contents = #{contents}, filename1 = #{filename1}, filename2 = #{filename2} where num = #{num}
+    </update>
+
+    <select id="view" resultType="com.example.cinema.dto.EventDTO">
+        select * from event
+        where num = #{num}
+    </select>
+
+    <select id="count" resultType="int">
+        select count(*) from event
     </select>
 </mapper>

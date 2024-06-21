@@ -257,8 +257,19 @@ public class LoginController {
 			}
 		}
 	}
-	
-	
+
+	@GetMapping("buy.do")
+	public String buy(
+			@RequestParam(value = "buy") int buy,
+			HttpSession session
+	) {
+		String userid= (String) session.getAttribute("userid");
+		MemberDTO dto=new MemberDTO();
+		dto.setUserid(userid);
+		dto.setBuy(buy);
+		memberDao.buy(dto);
+		return "redirect:/mypage/detail.do";
+	}
 }
 
 

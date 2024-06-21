@@ -5,9 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="221be55d-f4b9-4bdd-b9ef-3361b3f9969d" name="Changes" comment="commit">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema/src/main/webapp/resources/images/store/dunebag.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema/src/main/webapp/resources/images/store/dunebottle.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema/src/main/webapp/resources/images/store/dunepad.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema/src/main/webapp/resources/images/store/pamiobook.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema/src/main/webapp/resources/images/store/wonkachoco.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema/src/main/resources/mappers/review.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/resources/mappers/review.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/ticket/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/ticket/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/controller/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/controller/ShowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/controller/ShowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/dto/EventDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/dto/EventDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/resources/mappers/event.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/resources/mappers/event.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/include/admin_menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/include/admin_menu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/include/menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/include/menu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/member/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/member/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/menu/menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/menu/menu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/movie/findcinema.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/movie/findcinema.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/show/event_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/show/event_list.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,24 +79,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;21&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/JAVA/cinema/cinema&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "jdk.selected.JAVA_MODULE": "21",
+    "last_opened_file_path": "E:/JAVA/cinema/cinema/src/main/webapp/WEB-INF/views",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\JAVA\cinema\cinema\src\main\webapp\WEB-INF\views" />
       <recent name="E:\JAVA\cinema\cinema\src\main\java\com\example\cinema\dto" />
       <recent name="E:\JAVA\cinema\cinema\src\main\java\com\example\cinema\dao" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\JAVA\cinema\cinema\src\main\webapp\resources\images\store" />
       <recent name="E:\JAVA\cinema\cinema\src\main\java\com\example\cinema\controller" />
     </key>
   </component>
@@ -150,6 +169,9 @@
       <option name="catalinaBase" value="C:\Users\user\.SmartTomcat\cinema\cinema.cinema.main~1" />
       <option name="contextPath" value="/" />
       <option name="docBase" value="E:\JAVA\cinema\cinema" />
+      <option name="envOptions">
+        <map />
+      </option>
       <option name="extraClassPath" value="" />
       <option name="port" value="80" />
       <option name="tomcatInfo">
@@ -197,7 +219,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718855591896</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="commit">
+      <option name="closed" value="true" />
+      <created>1718865878753</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1718865878753</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

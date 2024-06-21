@@ -435,59 +435,59 @@ body {
          <div style="border: 1px solid #ddd; border-radius: 20px; padding: 10px; width: 350px; margin : 0  10px;">
             <div style="display: flex; justify-content: space-between; align-items: center;">
                 <h2 style="margin: 10px;">콤보</h2>
-                <button onclick="window.location.href='../store/index.jsp'" style="margin: 10px;">더보기</button>
+                <button onclick="window.location.href='/store/list.do'" style="margin: 10px;">더보기</button>
             </div>
             <div style="display: flex; align-items: center; ">
-               <button onclick="window.location.href='/cinema/store_servlet/detail.do?product_code=203'" style="margin: 0 0 0 20px; padding: 0; border: none; background: none; cursor: pointer;"><img src="/resources/images/store/cgv.jpg" style="width: 100px; height: 100px; margin:0 20px "></button>
-              <button onclick="window.location.href='/cinema/store_servlet/detail.do?product_code=203'" style="margin: 0; padding: 0;border: none; background: none; cursor: pointer;"><p style= "font-size:16px ">쌍용콤보<br>10,000원</p></button>
+               <button onclick="window.location.href='/store/detail.do?product_code=203'" style="margin: 0 0 0 20px; padding: 0; border: none; background: none; cursor: pointer;"><img src="/resources/images/store/cgv.jpg" style="width: 100px; height: 100px; margin:0 20px "></button>
+              <button onclick="window.location.href='/store/detail.do?product_code=203'" style="margin: 0; padding: 0;border: none; background: none; cursor: pointer;"><p style= "font-size:16px ">쌍용콤보<br>10,000원</p></button>
            </div>
            <div style="display: flex; align-items: center; ">
-               <button onclick="window.location.href='/cinema/store_servlet/detail.do?product_code=204'" style="margin: 0 0 0 20px; padding: 0; border: none; background: none; cursor: pointer;"><img src="/resources/images/store/large.jpg" style="width: 100px; height: 100px; margin:0 20px "></button>
-              <button onclick="window.location.href='/cinema/store_servlet/detail.do?product_code=204'" style="margin: 0; padding: 0;border: none; background: none; cursor: pointer;"><p style= "font-size:16px ">라지콤보<br>15,000원</p></button>
+               <button onclick="window.location.href='/store/detail.do?product_code=204'" style="margin: 0 0 0 20px; padding: 0; border: none; background: none; cursor: pointer;"><img src="/resources/images/store/large.jpg" style="width: 100px; height: 100px; margin:0 20px "></button>
+              <button onclick="window.location.href='/store/detail.do?product_code=204'" style="margin: 0; padding: 0;border: none; background: none; cursor: pointer;"><p style= "font-size:16px ">라지콤보<br>15,000원</p></button>
            </div>
            <div style="display: flex; align-items: center; ">
-               <button onclick="window.location.href='/cinema/store_servlet/detail.do?product_code=202'" style="margin: 0 0 0 20px; padding: 0; border: none; background: none; cursor: pointer;"><img src="/resources/images/store/small.jpg" style="width: 100px; height: 100px; margin:0 20px "></button>
-              <button onclick="window.location.href='/cinema/store_servlet/detail.do?product_code=202'" style="margin: 0; padding: 0;border: none; background: none; cursor: pointer;"><p style= "font-size:16px ">스몰콤보<br>7,000원</p></button>
+               <button onclick="window.location.href='/store/detail.do?product_code=202'" style="margin: 0 0 0 20px; padding: 0; border: none; background: none; cursor: pointer;"><img src="/resources/images/store/small.jpg" style="width: 100px; height: 100px; margin:0 20px "></button>
+              <button onclick="window.location.href='/store/detail.do?product_code=202'" style="margin: 0; padding: 0;border: none; background: none; cursor: pointer;"><p style= "font-size:16px ">스몰콤보<br>7,000원</p></button>
            </div>
         </div>
         
         <div style="border: 1px solid #ddd; border-radius: 20px; padding: 10px; width: 350px; margin : 0 10px ;">
             <div style="display: flex; justify-content: space-between; align-items: center;">
                 <h2 style="margin: 10px;">스낵</h2>
-                <button onclick="window.location.href='../store/index.jsp'" style="margin: 10px;">더보기</button>
+                <button onclick="window.location.href='/store/list.do'" style="margin: 10px;">더보기</button>
             </div>
             <div style="display: flex; align-items: center; ">
-               <button onclick="window.location.href='/cinema/store_servlet/detail.do?product_code=224'" style="margin: 0 0 0 20px; padding: 0; border: none; background: none; cursor: pointer;"><img src="/resources/images/store/me.jpg" style="width: 100px; height: 100px; margin:0 20px "></button>
-              <button onclick="window.location.href='/cinema/store_servlet/detail.do?product_code=224'" style="margin: 0; padding: 0;border: none; background: none; cursor: pointer;"><p style= "font-size:16px ">오징어<br>3,500원</p></button>
+               <button onclick="window.location.href='/store/detail.do?product_code=224'" style="margin: 0 0 0 20px; padding: 0; border: none; background: none; cursor: pointer;"><img src="/resources/images/store/me.jpg" style="width: 100px; height: 100px; margin:0 20px "></button>
+              <button onclick="window.location.href='/store/detail.do?product_code=224'" style="margin: 0; padding: 0;border: none; background: none; cursor: pointer;"><p style= "font-size:16px ">오징어<br>3,500원</p></button>
            </div>
            <div style="display: flex; align-items: center; ">
-               <button onclick="window.location.href='/cinema/store_servlet/detail.do?product_code=220'" style="margin: 0 0 0 20px; padding: 0; border: none; background: none; cursor: pointer;"><img src="/resources/images/store/chili.jpg" style="width: 100px; height: 100px; margin:0 20px "></button>
-              <button onclick="window.location.href='/cinema/store_servlet/detail.do?product_code=220'" style="margin: 0; padding: 0;border: none; background: none; cursor: pointer;"><p style= "font-size:16px ">칠리치즈나쵸<br>4,900원</p></button>
+               <button onclick="window.location.href='/store/detail.do?product_code=220'" style="margin: 0 0 0 20px; padding: 0; border: none; background: none; cursor: pointer;"><img src="/resources/images/store/chili.jpg" style="width: 100px; height: 100px; margin:0 20px "></button>
+              <button onclick="window.location.href='/store/detail.do?product_code=220'" style="margin: 0; padding: 0;border: none; background: none; cursor: pointer;"><p style= "font-size:16px ">칠리치즈나쵸<br>4,900원</p></button>
            </div>
            <div style="display: flex; align-items: center; ">
-               <button onclick="window.location.href='/cinema/store_servlet/detail.do?product_code=221'" style="margin: 0 0 0 20px; padding: 0; border: none; background: none; cursor: pointer;"><img src="/resources/images/store/plain.jpg" style="width: 100px; height: 100px; margin:0 20px "></button>
-              <button onclick="window.location.href='/cinema/store_servlet/detail.do?product_code=221'" style="margin: 0; padding: 0;border: none; background: none; cursor: pointer;"><p style= "font-size:16px ">플레인핫도그<br>4,500원</p></button>
+               <button onclick="window.location.href='/store/detail.do?product_code=221'" style="margin: 0 0 0 20px; padding: 0; border: none; background: none; cursor: pointer;"><img src="/resources/images/store/plain.jpg" style="width: 100px; height: 100px; margin:0 20px "></button>
+              <button onclick="window.location.href='/store/detail.do?product_code=221'" style="margin: 0; padding: 0;border: none; background: none; cursor: pointer;"><p style= "font-size:16px ">플레인핫도그<br>4,500원</p></button>
            </div>
         </div>
         
-<!--         <div style="border: 1px solid #ddd; border-radius: 20px; padding: 10px; width: 350px; margin : 0  10px;">
+         <div style="border: 1px solid #ddd; border-radius: 20px; padding: 10px; width: 350px; margin : 0  10px;">
             <div style="display: flex; justify-content: space-between; align-items: center;">
                 <h2 style="margin: 10px;">굿즈</h2>
-                <button onclick="window.location.href='../store/index.jsp'" style="margin: 10px;">더보기</button>
+                <button onclick="window.location.href='/store/list.do'" style="margin: 10px;">더보기</button>
             </div>
             <div style="display: flex; align-items: center; ">
-               <button onclick="window.location.href='/cinema/store_servlet/detail.do?product_code=262'" style="margin: 0 0 0 20px; padding: 0; border: none; background: none; cursor: pointer;"><img src="/resources/images/store/pamiobook.jpg" style="width: 100px; height: 100px; margin:0 20px "></button>
-              <button onclick="window.location.href='/cinema/store_servlet/detail.do?product_code=262'" style="margin: 0; padding: 0;border: none; background: none; cursor: pointer;"><p style= "font-size:16px ">파묘 책갈피<br>3,000원</p></button>
+               <button onclick="window.location.href='/store/detail.do?product_code=262'" style="margin: 0 0 0 20px; padding: 0; border: none; background: none; cursor: pointer;"><img src="/resources/images/store/pamiobook.jpg" style="width: 100px; height: 100px; margin:0 20px "></button>
+              <button onclick="window.location.href='/store/detail.do?product_code=262'" style="margin: 0; padding: 0;border: none; background: none; cursor: pointer;"><p style= "font-size:16px ">파묘 책갈피<br>3,000원</p></button>
            </div>
            <div style="display: flex; align-items: center; ">
-               <button onclick="window.location.href='/cinema/store_servlet/detail.do?product_code=264'" style="margin: 0 0 0 20px; padding: 0; border: none; background: none; cursor: pointer;"><img src="/resources/images/store/wonkachoco.jpg" style="width: 100px; height: 100px; margin:0 20px "></button>
-             <button onclick="window.location.href='/cinema/store_servlet/detail.do?product_code=264'" style="margin: 0; padding: 0;border: none; background: none; cursor: pointer;"><p style= "font-size:16px ">웡카 초콜릿<br>4,000원</p></button>
+               <button onclick="window.location.href='/store/detail.do?product_code=264'" style="margin: 0 0 0 20px; padding: 0; border: none; background: none; cursor: pointer;"><img src="/resources/images/store/wonkachoco.jpg" style="width: 100px; height: 100px; margin:0 20px "></button>
+             <button onclick="window.location.href='/store/detail.do?product_code=264'" style="margin: 0; padding: 0;border: none; background: none; cursor: pointer;"><p style= "font-size:16px ">웡카 초콜릿<br>4,000원</p></button>
            </div>
            <div style="display: flex; align-items: center; ">
-               <button onclick="window.location.href='/cinema/store_servlet/detail.do?product_code=267'" style="margin: 0 0 0 20px; padding: 0; border: none; background: none; cursor: pointer;"><img src="/resources/images/store/dunepad.jpg" style="width: 100px; height: 100px; margin:0 20px "></button>
-              <button onclick="window.location.href='/cinema/store_servlet/detail.do?product_code=267'" style="margin: 0; padding: 0;border: none; background: none; cursor: pointer;"><p style= "font-size:16px ">듄 마우스패드<br>15,000원</p></button>
+               <button onclick="window.location.href='/store/detail.do?product_code=267'" style="margin: 0 0 0 20px; padding: 0; border: none; background: none; cursor: pointer;"><img src="/resources/images/store/dunepad.jpg" style="width: 100px; height: 100px; margin:0 20px "></button>
+              <button onclick="window.location.href='/store/detail.do?product_code=267'" style="margin: 0; padding: 0;border: none; background: none; cursor: pointer;"><p style= "font-size:16px ">듄 마우스패드<br>15,000원</p></button>
            </div>
-        </div> -->
+        </div> 
         
       </div>
       

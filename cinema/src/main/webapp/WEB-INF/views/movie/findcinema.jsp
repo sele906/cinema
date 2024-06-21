@@ -379,10 +379,11 @@ header {
 		hideMenu(2);
 		hideMenu(3);
 		hideMenu(4);
+		hideMenu(5);
 	});
 	function showMenu(menuNum) {
 		// 숨겨진 모든 서브메뉴를 숨김
-		for (let i = 1; i <= 4; i++) {
+		for (let i = 1; i <= 5; i++) {
 			hideMenu(i);
 		}
 		// 선택된 메뉴의 서브메뉴를 표시
@@ -494,19 +495,19 @@ header {
 					<li><a href="/findcinema.do">극장 예매</a></li>
 					<li><a href="/findcinema.do">쌍용시네마 찾기</a></li>
 				</ul></li>
-			<!-- <li><a href="../store/index.jsp" onmouseover="showMenu(4)"
+			<li><a href="/store/list.do" onmouseover="showMenu(4)"
 				onmouseout="hideDelay(4)" onmousemove="keepShow(4)">스토어</a>
 				<ul class="submenu" id="submenu4" onmouseover="keepShow(4)"
 					onmouseout="hideDelay(4)">
 					<li><a href="#">팝콘, 매점</a></li>
 					<li><a href="#">굿즈</a></li>
-				</ul></li> -->
-			<li><a href="/list.do" onmouseover="showMenu(4)"
-				onmouseout="hideDelay(4)" onmousemove="keepShow(4)">이벤트/혜택</a>
-				<ul class="submenu" id="submenu4" onmouseover="keepShow(4)"
-					onmouseout="hideDelay(4)">
-					<li><a href="/list.do">진행중인 이벤트</a></li>
-					<li><a href="/list.do">기프티콘</a></li>
+				</ul></li>
+			<li><a href="/event/list.do" onmouseover="showMenu(5)"
+				onmouseout="hideDelay(5)" onmousemove="keepShow(5)">이벤트/혜택</a>
+				<ul class="submenu" id="submenu5" onmouseover="keepShow(5)"
+					onmouseout="hideDelay(5)">
+					<li><a href="/event/list.do">진행중인 이벤트</a></li>
+					<li><a href="/event/list.do">기프티콘</a></li>
 				</ul></li>
 		</ul>
 

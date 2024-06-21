@@ -37,9 +37,9 @@
         <c:otherwise>
         <a href="/cboard/main.do">공지사항/자주 묻는 질문</a>
             <a href="/product/list.do">상품목록</a>
-            <a href="/shop/product_write.jsp">상품등록</a>
-            <a href="/list.do">이벤트</a>
-            <a href="/member/index.jsp">회원관리</a>
+            <a href="/product/write.do">상품등록</a>
+            <a href="/event/list.do">이벤트</a>
+            <a href="/member/list.do">회원관리</a>
             <div class="navbar-user">
                 ${sessionScope.admin_name}님이 로그인 중입니다.
                 <a href="/admin/logout.do" class="navbar-right">로그아웃</a>

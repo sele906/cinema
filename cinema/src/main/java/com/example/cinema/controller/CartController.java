@@ -20,7 +20,7 @@ public class CartController {
     @Autowired
     CartDAO cartDAO;
 
-    @PostMapping("insert.do")
+    @GetMapping("insert.do")
     public String insert(
             HttpSession session,
             Model model,
@@ -49,7 +49,7 @@ public class CartController {
         model.addAttribute("sum", sum);
         model.addAttribute("list", items);
 
-        return "/cart/cart_list";
+        return "cart/cart_list";
     }
 
     @GetMapping("delete.do")
@@ -62,8 +62,7 @@ public class CartController {
 
     @GetMapping("delete_all.do")
     public String delete_all(
-            HttpSession session,
-            @RequestParam(name = "cart_id") int cart_id
+            HttpSession session
     ) {
         String userid = (String) session.getAttribute("userid");
         cartDAO.clear_cart(userid);
