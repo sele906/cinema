@@ -24,7 +24,7 @@ CGV를 참고하여 만든 스프링부트 영화 예매 사이트 입니다.<br
 <summary><b>ER 다이어그램</b></summary>
 <div markdown="1">
   
-![그림1](https://github.com/sele906/cinema/assets/81071162/052a4fda-ebbb-4d75-b84a-ff9db7a1954d)
+![cinema_erd](https://github.com/sele906/cinema/assets/81071162/49fdc1aa-9437-4d4c-b563-524111f27e87)
 </div>
 </details>
 
