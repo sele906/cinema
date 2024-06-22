@@ -1,6 +1,6 @@
 # SpringBoot Project Cinema
 
-CGV를 참고하여 만든 스프링부트 영화 예매 사이트 입니다.<br/>
+CGV를 참고하여 만든 스프링부트 영화 예매 사이트 Ssang Young Cinema 입니다.<br/>
 개발 기간: 2024.02.08. ~ 2024.03.08.
 
 ## 프로젝트 설계
