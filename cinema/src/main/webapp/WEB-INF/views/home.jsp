@@ -396,17 +396,17 @@ body {
 		</div>
 
 		<div class="adimg" style="text-align: center;">
-			<button onclick="window.location.href='/detail.do?num=4'"
+			<button onclick="window.location.href='/show/detail.do?num=4'"
 				style="border: none; background: none; cursor: pointer;">
 				<img src="/resources/images/adver/ad2.png"
 					style="width: 350px; height: 350px; margin: 0 20px">
 			</button>
-			<button onclick="window.location.href='/detail.do?num=5'"
+			<button onclick="window.location.href='/show/detail.do?num=5'"
 				style="border: none; background: none; cursor: pointer;">
 				<img src="/resources/images/adver/ad3.png"
 					style="width: 350px; height: 350px; margin: 0 20px">
 			</button>
-			<button onclick="window.location.href='/detail.do?num=6'"
+			<button onclick="window.location.href='/show/detail.do?num=6'"
 				style="border: none; background: none; cursor: pointer;">
 				<img src="/resources/images/adver/ad4.png"
 					style="width: 350px; height: 350px; margin: 0 20px">

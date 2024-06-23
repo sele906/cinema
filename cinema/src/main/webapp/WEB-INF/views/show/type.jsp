@@ -58,11 +58,11 @@ body {
 	<%@include file="../menu/menu.jsp"%>
 	<div class="container">
 		<!-- 본문을 감싸는 컨테이너를 생성합니다. -->
-			<a href="/list.do" style="text-decoration: none;"><h1 style="color: black;">EVENT</h1></a>
+			<a href="/show/list.do" style="text-decoration: none;"><h1 style="color: black;">EVENT</h1></a>
 		<hr style="border-top: 5px solid black;">
-			<a href="/category.do?type=영화" style="text-decoration: none; color: black;">영화</a> 
-			<a href="/category.do?type=굿즈" style="text-decoration: none; color: black;">굿즈</a> 
-			<a href="/category.do?type=할인" style="text-decoration: none; color: black;">할인</a>
+			<a href="/show/category.do?type=영화" style="text-decoration: none; color: black;">영화</a>
+			<a href="/show/category.do?type=굿즈" style="text-decoration: none; color: black;">굿즈</a>
+			<a href="/show/category.do?type=할인" style="text-decoration: none; color: black;">할인</a>
 
 		<hr style="border-top: 2px solid black;">
 		<br> <br>
@@ -72,8 +72,8 @@ body {
 			<hr style="border-top: 2px solid black;">
 		</c:if>
 		<c:if test="${type == '굿즈'}">
-			<h2 style="display: inline;">팝콘</h2>
-			<p style="display: inline;">고소, 달콤부터 고메팝콘까지, 안먹으면 서운해요</p>
+			<h2 style="display: inline;">굿즈</h2>
+			<p style="display: inline;">티켓부터 에코백까지, 수집하는 즐거움!</p>
 			<hr style="border-top: 2px solid black;">
 		</c:if>
 		<c:if test="${type == '할인'}">
@@ -82,7 +82,7 @@ body {
 			<hr style="border-top: 2px solid black;">
 		</c:if>
 		<c:forEach var="row" items="${list}">
-    <a href="<c:url value='/detail.do?num=${row.num}' />">
+    <a href="<c:url value='/show/detail.do?num=${row.num}' />">
 				<div class="movie-item">
 					<img src="/resources/images/store/${row.filename1}"
 						style="width: 200px; height: 150;">

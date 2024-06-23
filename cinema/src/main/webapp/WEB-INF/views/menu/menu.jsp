@@ -319,12 +319,12 @@ header {
 							<li><a href="/store/list.do">팝콘, 매점</a></li>
 							<li><a href="/store/list.do">굿즈</a></li>
 						</ul></li>
-					<li><a href="/event/list.do" onmouseover="showMenu(5)"
+					<li><a href="/show/list.do" onmouseover="showMenu(5)"
 						onmouseout="hideDelay(5)" onmousemove="keepShow(5)">이벤트/혜택</a>
 						<ul class="submenu" id="submenu5" onmouseover="keepShow(5)"
 							onmouseout="hideDelay(5)">
-							<li><a href="/event/list.do">진행중인 이벤트</a></li>
-							<li><a href="/event/list.do">기프티콘</a></li>
+							<li><a href="/show/list.do">진행중인 이벤트</a></li>
+							<li><a href="/show/list.do">기프티콘</a></li>
 						</ul></li>
 				</ul>
 		
