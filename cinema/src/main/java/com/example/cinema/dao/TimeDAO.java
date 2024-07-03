@@ -16,45 +16,46 @@ public class TimeDAO {
 	@Autowired
 	SqlSession sqlSession;
 
-	public List<TimeDTO> choosePlace(TimeDTO dto) {
+
+	public List<TimeDTO> choose_place(TimeDTO dto) {
 		List<TimeDTO> daytable = null;
 		daytable = sqlSession.selectList("time.cinema_place", dto);
 		return daytable;
 	}
 
-	public List<TimeDTO> chooseTime(TimeDTO dto) {
+	public List<TimeDTO> choose_time(TimeDTO dto) {
 		List<TimeDTO> timelist = null;
 		timelist = sqlSession.selectList("time.time", dto);
 		return timelist;
 	}
 
-	public Map<String, Object> userMovie(int time_idx) {
+	public Map<String, Object> user_movie(int time_idx) {
 		Map<String, Object> map = new HashMap<>();
 		map = sqlSession.selectOne("time.userMovie", time_idx);
 		return map;
 	}
 
-	public void insertMovieInfo(Map<String, Object> map) {
+	public void insert_movie_info(Map<String, Object> map) {
 		sqlSession.insert("time.movie_info_insert", map);
 	}
 
-	public int sameMovie(int movieCd) {
+	public int same_movie(int movie_cd) {
 		int count = 0;
 		try {
-			count = sqlSession.selectOne("time.movie_same_count", movieCd);
+			count = sqlSession.selectOne("time.movie_same_count", movie_cd);
 			return count;
 		} catch (Exception e) {
 			return count;
 		}
 	}
 
-	public Map<String, Object> getMovieInfo(int movieCd) {
+	public Map<String, Object> get_movie_info(int movie_cd) {
 		Map<String, Object> movie_info = new HashMap<String, Object>();
-		movie_info = sqlSession.selectOne("time.movie_info", movieCd);
+		movie_info = sqlSession.selectOne("time.movie_info", movie_cd);
 		return movie_info;
 	}
 
-	public int getTimeIdx(TimeDTO dto) {
+	public int get_time_idx(TimeDTO dto) {
 		int Tidx = 0;
 		try {
 			Tidx = sqlSession.selectOne("time.getTimeIdx", dto);
@@ -64,7 +65,7 @@ public class TimeDAO {
 		}
 	}
 
-	public void insertTime(TimeDTO dto) {
+	public void insert_time(TimeDTO dto) {
 		sqlSession.insert("time.insertTime", dto);
 	}
 

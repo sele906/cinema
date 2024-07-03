@@ -335,7 +335,7 @@ $(function(){
         if (cinema_place != "") {
 			$.ajax({
 				type: "POST",
-				url: "/ticket/movie_place.do",
+				url: "/ticket/movie_day.do",
 				data: params,
 				success: function(txt){
 					console.log(txt);
@@ -443,7 +443,7 @@ $(document).on('click','.time_box', function(){ //시간 선택
 		<p>13000원</p>
 		
 		<!-- input 전달값 숨기기 -->
-		<input name="movie_code" id="movie_code" value="${movieCd}">
+		<input name="movie_code" id="movie_code" value="${movie_cd}">
 		<input name="movie_title" id="movie_title" value="${map.movie_title}">
 		<input name="movie_price" value="${map.price}">
 		

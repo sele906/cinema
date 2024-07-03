@@ -29,8 +29,8 @@
 <insert id="movie_info_insert">
 	insert into movie
 	values (
-		#{movieCd},
-		#{movieTitle},
+		#{movie_cd},
+		#{movie_title},
 		#{imgpath},
 		13000
 	)

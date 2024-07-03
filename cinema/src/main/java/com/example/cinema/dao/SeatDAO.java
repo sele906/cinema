@@ -15,12 +15,12 @@ public class SeatDAO {
 	@Autowired
 	SqlSession sqlSession;
 	
-	public List<SeatDTO> savedSeats(SeatDTO dto) {
+	public List<SeatDTO> saved_seats(SeatDTO dto) {
 		List<SeatDTO> list = sqlSession.selectList("seat.saved", dto);
 		return list;
 	}
 	
-	public List<Map<String, Object>> Tickets(String userid) {
+	public List<Map<String, Object>> tickets(String userid) {
 		List<Map<String, Object>> list = sqlSession.selectList("seat.book_ticket", userid);
 		return list;
 	}

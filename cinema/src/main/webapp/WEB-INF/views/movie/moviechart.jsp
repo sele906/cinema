@@ -252,7 +252,7 @@ margin: 0 10%;
 				    	window.location.href ='/review/noheart.do?movieCd='+movieCd;
 				    }
 				    function moviebook(movieCd) {
-				        window.location.href = '/ticket/book_tickets.do?movieCd=' + movieCd;
+				        window.location.href = '/ticket/book_tickets.do?movie_cd=' + movieCd;
 				    }
 				</script>
 				

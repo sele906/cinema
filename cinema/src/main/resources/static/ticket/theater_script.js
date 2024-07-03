@@ -9,9 +9,9 @@ const ABC = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N
 
 
 //저장된 데이터 선택된 좌석으로 보이게
-let Savedseats = document.querySelectorAll('.SavedseatNum');
+let Savedseats = document.querySelectorAll('.saved_seat_num');
 for (i=0; i<Savedseats.length; i++) {
-	let Savedseat = document.getElementsByClassName("SavedseatNum")[i].innerHTML.trim();
+	let Savedseat = document.getElementsByClassName("saved_seat_num")[i].innerHTML.trim();
 	let SavedseatNum = StringtoNum(Savedseat, col_num);
 	seats[SavedseatNum].className = "seat choose";
 }
@@ -67,11 +67,13 @@ function updateSelectedCount() {
 	
 	//좌석수 세기
 	let selectedSeatsCount = selectedSeats.length;
+	console.log(selectedSeatsCount);
 	document.getElementById("seat_count").value = selectedSeatsCount;
 	
 	 //영화 금액 바꾸기
    Mprice = document.getElementById("price").value;
-   document.getElementById("movie_price").value = Mprice * selectedSeatsCount;
+   console.log(Mprice);
+   document.getElementById("movieprice").value = Mprice * selectedSeatsCount;
 }
 
 

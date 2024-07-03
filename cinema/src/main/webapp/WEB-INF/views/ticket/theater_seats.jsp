@@ -54,20 +54,20 @@ $(function(){
 	/* 좌석 데이터 전달 */
 	
 	let imgpath=$("#imgpath").val();
-	let movieTitle=$("#movieTitle").val();
-	let moviePrice=$("#moviePrice").val();
-	let movieTime=$("#movieTime").val();
-	let theaterNum=$("#theaterNum").val();
-	let cinemaPlace=$("#cinemaPlace").val();
+	let movie_title=$("#movie_title").val();
+	let movie_price=$("#movie_price").val();
+	let movie_time=$("#movie_time").val();
+	let theater_num=$("#theater_num").val();
+	let cinema_place=$("#cinema_place").val();
 	let time_idx=$("#time_idx").val();
 	
 	let params = {
 			"imgpath":imgpath,
-			"movieTitle":movieTitle,
-			"moviePrice":moviePrice,
-			"movieTime":movieTime,
-			"theaterNum":theaterNum,
-			"cinemaPlace":cinemaPlace,
+			"movie_title":movie_title,
+			"movie_price":movie_price,
+			"movie_time":movie_time,
+			"theater_num":theater_num,
+			"cinema_place":cinema_place,
 			"time_idx":time_idx
 	};
 	
@@ -100,13 +100,13 @@ $(function(){
 	가져온 값<br>
 	아이디: <input type="text" id="id" value="${sessionScope.userid}"><br>
 	포스터이미지경로: <input type="text" id="imgpath" value="${map.imgpath}"><br>
-	영화제목: <input type="text" id="movieTitle" value="${map.movie_title}"><br>
-	금액: <input type="text" id="moviePrice" value="${map.price}"><br>
-	시간: <input type="text" id="movieTime" value="${map.time}"><br>
-	상영관: <input type="text" id="theaterNum" value="${map.theater_num}"><br>
-	영화관: <input type="text" id="cinemaPlace" value="${map.cinema_place}"><br>
+	영화제목: <input type="text" id="movie_title" value="${map.movie_title}"><br>
+	금액: <input type="text" id="movie_price" value="${map.price}"><br>
+	시간: <input type="text" id="movie_time" value="${map.time}"><br>
+	상영관: <input type="text" id="theater_num" value="${map.theater_num}"><br>
+	영화관: <input type="text" id="cinema_place" value="${map.cinema_place}"><br>
 	
-	영화코드: <input type="text" id="movieCd" value="${map.movieCd}"><br>
+	영화코드: <input type="text" id="movie_cd" value="${map.movieCd}"><br>
 	시간코드: <input type="text" id="time_idx" value="${time_idx}"><br>
 </div>
 

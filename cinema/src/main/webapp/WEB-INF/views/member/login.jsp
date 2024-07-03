@@ -104,6 +104,25 @@ form {
 	color: #black;
 	text-decoration: none;
 }
+
+#login_info {
+	display: flex;
+    align-items: flex-end;
+    height: 52px;
+}
+#login_test {
+	display: flex;
+    padding: 0 10px;
+    align-items: center;
+    height: 30px;
+}
+#get_login_test {
+	margin: 0 5px;
+	cursor: pointer;
+}
+label {
+	cursor: pointer;
+}
 </style>
 
 <meta charset="UTF-8">
@@ -140,7 +159,15 @@ form {
 		<div
 			style="display: flex; align-items: center; margin: 50px 0 50px 0;">
 			<div>
-				<div class=titleword>로그인</div>
+			    <div id="login_info">
+					<div class=titleword>로그인</div>
+					<div id="login_test">
+						<input type="checkbox" id="get_login_test">
+						<label for="get_login_test">테스트 로그인</label>
+					</div>
+				</div>
+				
+
 				<hr style="border: 1px solid #ccc; margin: 10px 0;">
 
 				<form id="loginForm" method="post">
@@ -198,6 +225,25 @@ form {
 
 
 	<script>
+
+		//체크박스 선택
+		var checkbox = document.getElementById('get_login_test');
+
+		// 체크박스 상태 변경
+		checkbox.addEventListener('change', function () {
+			if (checkbox.checked) {
+				userid = document.getElementById('userid');
+				passwd = document.getElementById('passwd');
+				loginform = document.getElementById('loginForm');
+
+				userid.value = 'cois34';
+				passwd.value = '1234';
+
+				loginform.action="/member/login.do";
+				loginform.submit();
+			}
+		});
+
 		function closeimg1() {
 			// 이미지를 감싸고 있는 요소의 display 속성을 'none'으로 설정하여 숨깁니다.
 			document.querySelector('.downimg').style.display = 'none';

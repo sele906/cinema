@@ -197,14 +197,14 @@ span {
 			<th>금액</th>
 		</tr>
 		<c:choose>
-	    <c:when test='${empty bookTickets or bookTickets.size() == 0}'>
+	    <c:when test='${empty book_tickets or book_tickets.size() == 0}'>
 	        <tr>
 	            <td colspan="9" id="empty">예매내역이 없습니다</td>
 	        </tr>
 	    </c:when>
 	    
 	    <c:otherwise>
-	        <c:forEach var="row" items="${bookTickets}">
+	        <c:forEach var="row" items="${book_tickets}">
 	            <tr>
 	           		<!-- 포스터 -->
 	                <td><img src="/resources/images/poster/${row.imgpath}"></td> 
@@ -261,7 +261,7 @@ span {
 	                <!-- 예매취소 -->
 	                <td>
 		                <div id="cancel_area">
-		                	<input type="checkbox" class="checkbox" name="Tnum" value="${row.ticket_idx}">
+		                	<input type="checkbox" class="checkbox" name="t_num" value="${row.ticket_idx}">
 		                	<input type="button" class="cancel" value="예매취소">
 		                </div>
 	                </td>

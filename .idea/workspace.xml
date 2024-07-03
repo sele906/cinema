@@ -5,15 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="221be55d-f4b9-4bdd-b9ef-3361b3f9969d" name="Changes" comment="commit">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/cinema.cinema.main.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/controller/TicketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/controller/TicketController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/dao/SeatDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/dao/SeatDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/dao/TimeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/dao/TimeDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/resources/mappers/time.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/resources/mappers/time.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/resources/static/ticket/theater_script.js" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/resources/static/ticket/theater_script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/menu/menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/menu/menu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/member/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/member/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/movie/findcinema.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/movie/findcinema.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/show/type.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/show/type.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/movie/moviechart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/movie/moviechart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/movie/moviedetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/movie/moviedetail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/ticket/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/ticket/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/ticket/result.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/ticket/result.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/ticket/theater_seats.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/ticket/theater_seats.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/ticket/theater_seats_screen.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/ticket/theater_seats_screen.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,17 +39,7 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="cinema" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="cinema" type="f1a62948:ProjectNode" />
-                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
@@ -186,6 +182,9 @@
       <option name="catalinaBase" value="C:\Users\user\.SmartTomcat\cinema\cinema.cinema.main~1" />
       <option name="contextPath" value="/" />
       <option name="docBase" value="E:\JAVA\cinema\cinema" />
+      <option name="envOptions">
+        <map />
+      </option>
       <option name="extraClassPath" value="" />
       <option name="port" value="80" />
       <option name="tomcatInfo">
@@ -243,6 +242,23 @@
     </task>
     <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit" />

@@ -17,7 +17,7 @@
 <div id="savedseat_list">
 	선택된 좌석<br>
 	<c:forEach var="dto" items="${list}">
-		<div class="SavedseatNum">
+		<div class="saved_seat_num">
 			${dto.seat_name}
 		</div>
 	</c:forEach>
@@ -29,7 +29,7 @@
 	
 	<!-- 선택한 상영관에 따라 영화관 보여주기 -->
 	
-	<c:set var="num" value="${theaterNum}"/>
+	<c:set var="num" value="${theater_num}"/>
 	<c:if test="${num == 1}">
 		<%@include file="../ticket/resource/theater1.html" %>
 	</c:if>
@@ -85,27 +85,27 @@
 		<img src="/resources/images/poster/${imgpath}">
 		
 		<div class="choose_info">
-			<input id="movie_title" name="movieTitle" value="${movieTitle}">
+			<input id="movie_title" name="movie_title" value="${movie_title}">
 		</div>
 		
 		<div class="choose_info">
-			<input id="cinema_place" name="cinemaPlace" value="${cinemaPlace}"> | <input id="movie_time" name="movieTime" value="${movieTime}"> | <input id="theater_num" name="theaterNum" value="${theaterNum}">관
+			<input id="cinema_place" name="cinema_place" value="${cinema_place}"> | <input id="movie_time" name="movie_time" value="${movie_time}"> | <input id="theater_num" name="theater_num" value="${theater_num}">관
 		</div>
 		
 		<div class="choose_info">
-			좌석 정보 <input id="seat_position" name="seatPos" value="0">
+			좌석 정보 <input id="seat_position" name="seat_pos" value="0">
 		</div>
 		
 		<div class="choose_info">
-			인원 <input id="seat_count" name="seatCount" value="0">명
+			인원 <input id="seat_count" name="seat_count" value="0">명
 		</div>
 		
 		<div class="choose_info">
-			금액 <input id="movie_price" name="moviePrice" value="0">원
-         <input type="hidden" id="price" value="${moviePrice}">
+			금액 <input id="movieprice" name="movie_price" value="0">원
+         <input type="hidden" id="price" value="${movie_price}">
 		</div>
 		
-		<input type="hidden" id="movieCd" name="movieCd" value="${movieCd}">
+		<input type="hidden" id="movieCd" name="movie_cd" value="${movie_cd}">
 		<input type="hidden" id="time_idx" name="time_idx" value="${time_idx}">
 	</form>
 	<button  id="btnconfirm" onclick="requestPay()">확인</button>

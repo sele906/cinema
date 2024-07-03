@@ -368,7 +368,7 @@ body {
 				</div>
 				<script> 
 				function moviebook(movieCd) {
-				        window.location.href = '/ticket/book_tickets.do?movieCd=' + movieCd;
+				        window.location.href = '/ticket/book_tickets.do?movie_cd=' + movieCd;
 				    }</script>
 				<%
 				movieCount++;

@@ -766,7 +766,7 @@ header {
 							function() {
 								var dateButtonsContainer = document
 										.getElementById('datebutton');
-								var currentDate = new Date();
+								var currentDate = new Date(2024, 5, 20, 12, 34, 0);
 
 								for (var i = 0; i < 7; i++) {
 									var date = new Date(currentDate);
@@ -1072,10 +1072,10 @@ header {
 
 	<%@ include file="../include/footer.jsp" %>
 
-<form name="form2" method="post" action="/ticket/MovieF.do" style="display: none;">
+<form name="form2" method="post" action="/ticket/movie_find.do" style="display: none;">
 
    영화관 <input id="cinema_place" name="cinema_place" value="SYC강남">
-   영화코드 <input id="movieCd" name="movieCd">
+   영화코드 <input id="movieCd" name="movie_cd">
    시간 <input id="time1" name="time1" value="2024-03-08 09:30">
    상영관<input id="theater_num" name="theater_num" value="1">
    <input type="submit">
