@@ -21,6 +21,14 @@ CGV를 참고하여 만든 스프링부트 영화 예매 사이트 입니다.<br
 <img src="https://img.shields.io/badge/intellijidea-181717?style=for-the-badge&logo=intellijidea&logoColor=white"> <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
 
 <details>
+<summary><b>유스케이스</b></summary>
+<div markdown="1">
+  
+![usecase_cinema](https://github.com/sele906/cinema/assets/81071162/393e2f84-a584-4a0e-82d0-d4cc2e70fa0e)
+</div>
+</details>
+
+<details>
 <summary><b>ER 다이어그램</b></summary>
 <div markdown="1">
   
