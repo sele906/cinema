@@ -6,20 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="221be55d-f4b9-4bdd-b9ef-3361b3f9969d" name="Changes" comment="commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/controller/TicketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/controller/TicketController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/dao/SeatDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/dao/SeatDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/dao/TimeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/dao/TimeDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema/src/main/resources/mappers/time.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/resources/mappers/time.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema/src/main/resources/static/ticket/theater_script.js" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/resources/static/ticket/theater_script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/member/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/member/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/movie/findcinema.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/movie/findcinema.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/movie/moviechart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/movie/moviechart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/movie/moviedetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/movie/moviedetail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/ticket/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/ticket/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/ticket/result.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/ticket/result.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/ticket/theater_seats.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/ticket/theater_seats.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/ticket/theater_seats_screen.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/webapp/WEB-INF/views/ticket/theater_seats_screen.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +103,7 @@
       <recent name="E:\JAVA\cinema\cinema\src\main\java\com\example\cinema\controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.cinema [build]">
+  <component name="RunManager" selected="Smart Tomcat.tomcat">
     <configuration name="CinemaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.cinema.CinemaApplication" />
       <extension name="coverage">
